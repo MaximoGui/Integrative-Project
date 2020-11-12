@@ -23,10 +23,11 @@ public class Produto {
 	@Size(min = 1, max = 100)
 	private String nome;
 	
-	@NotNull
+	
 	@Size(min = 1, max = 100)
 	private String tecnologia;
 	
+	@NotNull
 	private float preco;
 	
 	private String cor;
