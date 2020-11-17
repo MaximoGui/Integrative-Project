@@ -2,13 +2,17 @@ package com.ecommerce.getset.service;
 
 import java.nio.charset.Charset;
 import java.util.Optional;
+
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.getset.model.UserLogin;
 import com.ecommerce.getset.model.Usuario;
 import com.ecommerce.getset.repository.UsuarioRepository;
 
+@Service
 public class UsuarioService {
 		
 		@Autowired
@@ -24,12 +28,12 @@ public class UsuarioService {
 		}
 		public Optional<UserLogin> Logar(Optional<UserLogin> user){
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-			Optional<Usuario> usuario = repository.findByUsuario(user.get().getUsuario());
+			Optional<Usuario> usuario = repository.findByEmail(user.get().getEmail());
 			
 			if(usuario.isPresent()) {
 				if(encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
 					
-					String auth = user.get().getUsuario() + ":" + user.get().getSenha();
+					String auth = user.get().getEmail() + ":" + user.get().getSenha();
 					byte[] encodeAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 					String authHeader = "Basic " + new String(encodeAuth);
 					

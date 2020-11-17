@@ -9,5 +9,4 @@ public class GetsetApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GetsetApplication.class, args);
 	}
-
 }
