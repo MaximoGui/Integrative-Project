@@ -8,15 +8,31 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link text-white " routerLink='/home'>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-monospace text-uppercase font-weight-bold p-3 " routerLink='/home'>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " routerLink='/contato'>Contato</a>
+        <a class="nav-link text-monospace text-uppercase font-weight-bold p-3" routerLink='/contato'>Contato</a>
       </li>
+
+      <div *ngIf='auth.btnLogin()'>
+        <li class="nav-item">
+          <a class="nav-link text-monospace text-uppercase font-weight-bold p-3" routerLink='/login'>Login</a>
+        </li>
+      </div>
+
+      <div *ngIf='auth.btnLogin()'>
+        <li class="nav-item">
+          <a class="nav-link text-monospace text-uppercase font-weight-bold p-3"
+            routerLink='/cadastro'>Cadastro</a>
+        </li>
+      </div>
+
+      <div *ngIf='auth.btnSair()'>
+        <li class="nav-item">
+          <a class="nav-link text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+        </li>
+      </div>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
+
   </div>
 </nav>
