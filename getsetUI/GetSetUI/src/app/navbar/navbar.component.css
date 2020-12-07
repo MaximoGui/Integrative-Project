@@ -1,4 +1,7 @@
 .cornav {
     background-color: #0A0A00;
 }
-    
+
+a{
+    cursor: pointer;
+}
