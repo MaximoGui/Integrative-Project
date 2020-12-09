@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { UserLogin } from '../Model/UserLogin';
 import { Usuario } from "../Model/Usuario";
 
@@ -9,34 +8,35 @@ import { Usuario } from "../Model/Usuario";
 })
 export class AuthService {
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-logar(userLogin: UserLogin){
-  return this.http.post('http://localhost:9000/usuarios/logar', userLogin)
-}
-
-cadastrar(usuario: Usuario) {
-  return this.http.post('http://localhost:9000/usuarios/cadastrar',usuario)
-}
-btnSair() {
-  let ok =false;
-  let token = localStorage.getItem('token')
-
-  if(token != null) {
-    ok = true
+  logar(userLogin: UserLogin) {
+    return this.http.post('http://localhost:9000/usuarios/logar', userLogin)
   }
 
-  return ok;
-}
-
-btnLogin() {
-  let ok =false;
-  let token = localStorage.getItem('token')
-
-  if(token == null) {
-    ok = true
+  cadastrar(usuario: Usuario) {
+    return this.http.post('http://localhost:9000/usuarios/cadastrar', usuario)
   }
 
-  return ok;
-}
+  btnSair() {
+    let ok = false;
+    let token = localStorage.getItem('token')
+
+    if (token != null) {
+      ok = true
+    }
+
+    return ok;
+  }
+
+  btnLogin() {
+    let ok = false;
+    let token = localStorage.getItem('token')
+
+    if (token == null) {
+      ok = true
+    }
+
+    return ok;
+  }
 }
