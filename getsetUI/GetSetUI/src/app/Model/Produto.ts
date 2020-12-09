@@ -1,5 +1,5 @@
 import { Categoria} from './Categoria'
-
+//colocar data
 export class Produto {
     public id: number;
     public nome: string;
