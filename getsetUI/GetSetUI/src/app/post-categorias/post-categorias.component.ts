@@ -27,8 +27,8 @@ export class PostCategoriasComponent implements OnInit {
     })
   }
 
-  findByIdCategorias() {
-    this.categoriaService.getByIdCategorias(this.categoria.id).subscribe((resp: Categoria) => {
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => {
       this.categoria =resp;
     })
   }
@@ -37,7 +37,7 @@ export class PostCategoriasComponent implements OnInit {
     if(this.categoria.nome == null) {
       alert('Preencha o campo de nome de categoria corretamente')
     }else{
-      this.categoriaService.postCategorias(this.categoria).subscribe((resp: Categoria) =>{
+      this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) =>{
       this.categoria = resp
       this.router.navigate(['/categorias']) 
       alert('categoria cadastrado com sucesso') 

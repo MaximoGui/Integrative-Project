@@ -1,0 +1,38 @@
+<div class="container">
+
+    <!--POG-->
+    <div class="row mt-5 mb-5"></div>
+    <!--/POG-->
+    
+    <div class="row mt-5 mb-5">
+        <div class="col-md-12">
+            <div>
+                <div class="form-group">
+                    <label for="nome">Nome do produto</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
+                        placeholder="Digite aqui o nome" [(ngModel)]="produto.nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="tecnologia">Tecnologia do produto</label>
+                    <textarea class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia"
+                        [(ngModel)]="produto.tecnologia"></textarea>
+                </div>
+
+                <div class="form-group m-0">
+                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink="/cadastro-categoria">Cadastre
+                            um novo</a></label>
+                    <select name="categoria" id='categoria' [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control">
+                        <option *ngFor="let item of listaCategorias" value={{item.id}}>
+                            {{item.nome}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

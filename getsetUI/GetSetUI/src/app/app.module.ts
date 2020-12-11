@@ -16,6 +16,10 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { PostCategoriasComponent } from './post-categorias/post-categorias.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { PostCategoriasComponent } from './post-categorias/post-categorias.compo
     LoginComponent,
     CadastroComponent,
     CategoriasComponent,
-    PostCategoriasComponent
+    PostCategoriasComponent,
+    DeleteProdutoComponent,
+    DeleteCategoriaComponent,
+    PutProdutoComponent,
+    PutCategoriaComponent
   ],
   imports: [
     BrowserModule,
