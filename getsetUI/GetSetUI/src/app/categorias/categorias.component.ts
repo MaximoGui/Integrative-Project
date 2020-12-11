@@ -40,7 +40,7 @@ export class CategoriasComponent implements OnInit {
     if (this.produto.nome == null ||  this.produto.categoria == null) {
       alert('Preencha todos os campos antes de publicar!')
     } else {
-      this.produtoService.postProdutos(this.produto).subscribe((resp: Produto) => {
+      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp;
         this.produto = new Produto()
         alert('Produto cadastrado com sucesso!')
@@ -63,7 +63,7 @@ export class CategoriasComponent implements OnInit {
   }
 
   findByIdCategorias() {
-    this.categoriaService.getByIdCategorias(this.idCategoria).subscribe((resp: Categoria) => {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria =resp;
     })
   }

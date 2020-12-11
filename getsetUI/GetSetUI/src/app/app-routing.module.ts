@@ -6,15 +6,24 @@ import {LoginComponent } from './login/login.component';
 import {CadastroComponent} from './cadastro/cadastro.component'
 import {CategoriasComponent} from './categorias/categorias.component'
 import { PostCategoriasComponent } from './post-categorias/post-categorias.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'contato', component: ContatoComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'cadastro', component: CadastroComponent},
-  { path: 'categorias', component: CategoriasComponent},
-  {path: 'cadastro-categorias', component: PostCategoriasComponent}
+  {path:'login', component: LoginComponent},
+  {path:'cadastro', component: CadastroComponent},
+  {path:'categorias', component: CategoriasComponent},
+  {path:'cadastro-categorias', component: PostCategoriasComponent},
+  {path:'editar-produto/:id', component: PutProdutoComponent},
+  {path:'editar-categoria/:id', component: PutCategoriaComponent},
+  {path:'delete-produto/:id', component: DeleteProdutoComponent},
+  {path:'delete-categoria/:id', component: DeleteCategoriaComponent}
+
 ];
 
 @NgModule({
