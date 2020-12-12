@@ -14,7 +14,7 @@ ul.social-network li {
 }
 
 .faFacebook, .faInstagram, .faLinkedin {
-    color: white;
+    color: #000000;
 }
 
 .faFacebook:hover {
@@ -30,9 +30,18 @@ ul.social-network li {
 }
 
 .corfooter {
-    background-color: #0a0a0a;
+    background-color: #ffffff;
 }
 
 .corcopy {
     background-color: #f7fbff;
+}
+
+.text{
+    color: black
+}
+
+hr { 
+    border: 0;
+    border-top: 1px solid #dddddd;
 }
