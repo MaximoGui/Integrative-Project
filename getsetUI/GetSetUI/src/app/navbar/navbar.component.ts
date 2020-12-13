@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
   }
 
   sair() {
