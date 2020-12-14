@@ -1,3 +1,56 @@
+
+<!--Importando a fonte-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<!--/Importando a fonte-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand img-fluid" href="#"> <img src="../../assets/imagens/getset logo - Copia.png" class="mr-2  logo" height="30" alt=""></a>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav d-flex mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/home'>Home <span
+            class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/contato'>Contato</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/categorias'>Categorias</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav d-flex ">
+
+        <div *ngIf='auth.btnLogin()' class="p-2">
+          <li class="nav-item d-flex">
+            <button type="button" class="btn btn-dark" routerLink='/login'>Login</button>
+          </li>
+        </div>
+
+        <div *ngIf='auth.btnLogin()' class="p-2">
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark" routerLink='/login' routerLink='/cadastro'>Cadastro</button>
+          </li>
+        </div>
+
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+          </li>
+        </div>
+    </ul>
+
+  </div>
+</nav>
+=======
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
 
@@ -47,3 +100,4 @@
 
     </div>
 </nav>
+
