@@ -8,7 +8,6 @@ import { ModalModule } from 'ngx-bootstrap/modal'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -22,12 +21,13 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
 import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
     FooterComponent,
     NavbarComponent,
     ContatoComponent,
@@ -39,7 +39,9 @@ import { AlertasComponent } from './alertas/alertas.component';
     DeleteCategoriaComponent,
     PutProdutoComponent,
     PutCategoriaComponent,
-    AlertasComponent
+    AlertasComponent,
+    AboutComponent
+
   ],
   imports: [
     BrowserModule,
