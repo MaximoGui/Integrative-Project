@@ -10,6 +10,7 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'editar-produto/:id', component: PutProdutoComponent},
   {path:'editar-categoria/:id', component: PutCategoriaComponent},
   {path:'delete-produto/:id', component: DeleteProdutoComponent},
-  {path:'delete-categoria/:id', component: DeleteCategoriaComponent}
+  {path:'delete-categoria/:id', component: DeleteCategoriaComponent},
+  {path:'about', component: AboutComponent}
 
 ];
 

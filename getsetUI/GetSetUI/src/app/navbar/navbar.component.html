@@ -1,3 +1,4 @@
+
 <!--Importando a fonte-->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 <!--/Importando a fonte-->
@@ -49,3 +50,54 @@
 
   </div>
 </nav>
+=======
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg cornav w-100 fixed-top">
+    <a class="navbar-brand text-uppercase font-weight-bold" href="../../assets/imagens/getset logo.png"></a>
+    <img src="../../assets/imagens/getset logo - Copia.png" class="mr-4 logo" height="30" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-uppercase font-weight-bold p-3 " routerLink='/home'>Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/categorias'>Loja</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/about'>Sobre nós</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/contato'>Contato</a>
+            </li>
+
+            <div *ngIf='auth.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/login'>Login</a>
+                </li>
+            </div>
+
+            <div *ngIf='auth.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/cadastro'>Cadastro</a>
+                </li>
+            </div>
+
+            <div *ngIf='auth.btnSair()'>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+                </li>
+            </div>
+        </ul>
+
+    </div>
+</nav>
+
