@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -23,7 +24,8 @@ export class CategoriasComponent implements OnInit {
   
   constructor(
     private produtoService: ProdutosService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -38,12 +40,12 @@ export class CategoriasComponent implements OnInit {
     this.produto.categoria = this.categoria;
 
     if (this.produto.nome == null ||  this.produto.categoria == null) {
-      alert('Preencha todos os campos antes de publicar!')
+      this.alert.showAlertInfo('Preencha todos os campos antes de publicar!')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp;
         this.produto = new Produto()
-        alert('Produto cadastrado com sucesso!')
+        this.alert.showAlertSuccess('Produto cadastrado com sucesso!')
         this.findAllProdutos()
       })
     }
