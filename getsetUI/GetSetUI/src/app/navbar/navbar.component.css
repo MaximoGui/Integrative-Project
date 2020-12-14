@@ -1,13 +1,9 @@
-.cornav {
-    background-color: #ffffff;
-}
-
 a{
     cursor: pointer;
 }
 
 *{
-    font-family: 'El Messiri', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .nav-link {
@@ -20,6 +16,3 @@ a{
     
 }
 
-.logo :hover {
-    color: #999A9c;
-}
