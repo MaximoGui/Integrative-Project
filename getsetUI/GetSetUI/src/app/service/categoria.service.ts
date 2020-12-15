@@ -20,7 +20,7 @@ export class CategoriaService {
   }
 
   getByIdCategoria(id: number): Observable<Categoria> {
-    return this.http.get<Categoria>(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:8080/categorias/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {
@@ -32,6 +32,10 @@ export class CategoriaService {
   }
 
   deleteCategoria(id: number) {
-    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/categorias/${id}`, this.token)
+  }
+
+  getByNomeCategoria(nome: string): Observable<Categoria[]> {
+    return this.http.get<Categoria[]>(`http://localhost:8080/categorias/nome/${nome}`, this.token)
   }
 } 

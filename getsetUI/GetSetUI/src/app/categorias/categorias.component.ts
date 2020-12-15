@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto';
 import { AlertasService } from '../service/alertas.service';
@@ -17,15 +18,18 @@ export class CategoriasComponent implements OnInit {
   
   categoria: Categoria = new Categoria();
   listaCategorias: Categoria[];
-  idCategoria: number
+  idCategoria: number;
+  nomeCategoria: string;
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
+  nome: string;
   
   constructor(
     private produtoService: ProdutosService,
     private categoriaService: CategoriaService,
-    private alert: AlertasService
+    private alert: AlertasService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -64,9 +68,29 @@ export class CategoriasComponent implements OnInit {
     })
   }
 
-  findByIdCategorias() {
+  findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria =resp;
     })
+  }
+
+  findByNomeProduto() {
+    if( this.nome ==='') {
+      this.findAllProdutos()
+    } else {
+      this.produtoService.getByNomeProduto(this.nome).subscribe((resp: Produto[]) => {
+        this.listaProdutos = resp;
+      })
+    }
+  }
+
+  findByNomeCategoria() {
+    if (this.nomeCategoria === '') {
+      this.findAllCategorias()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categoria[]) => {
+        this.listaCategorias = resp;
+      })
+    } 
   }
 }
