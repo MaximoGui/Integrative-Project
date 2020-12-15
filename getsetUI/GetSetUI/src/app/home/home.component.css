@@ -17,11 +17,6 @@ p.card-text {
 
 .mateus {
     width: 100%;
-    height: 100%;
-}
-
-.corjumbo {
-    background-color: #ddd9ce ;
 }
 
 .comprar{
@@ -32,7 +27,9 @@ p.card-text {
     cursor: pointer;
 }
 
-
+.branco{
+    color: #fff;
+}
 
 .card{
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
@@ -42,4 +39,22 @@ p.card-text {
 .card:hover{
     transform: scale(1.01);
  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.hr3 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #ddd9ce, transparent);  
+  }
+
+.jumbotron {
+    background: url("https://blog.newrelic.com/wp-content/uploads/good-programmer-banner-final.jpg") ; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+
+  @media only screen and (max-width: 700px){
+    .overlay { display: none; }
 }
