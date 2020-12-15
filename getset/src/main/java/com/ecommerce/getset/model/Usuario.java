@@ -17,7 +17,7 @@ public class Usuario {
 	private long id;
 	
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 3, max = 100)
 	private String nome;
 	
 	@NotNull
@@ -27,6 +27,16 @@ public class Usuario {
 	@NotNull
 	@Size(min = 8, max = 100)
 	private String senha;
+	
+	private boolean admin;
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
 
 	public long getId() {
 		return id;

@@ -25,12 +25,11 @@ public class Produto {
 	
 	
 	@Size(min = 1, max = 100)
-	private String tecnologia;
+	private String descricao;
 	
-	@NotNull
+	private String imagem;
+	
 	private float preco;
-	
-	private String cor;
 	
 	private int estoque;
 	
@@ -54,12 +53,21 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public String getTecnologia() {
-		return tecnologia;
+
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setTecnologia(String tecnologia) {
-		this.tecnologia = tecnologia;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	public float getPreco() {
@@ -68,14 +76,6 @@ public class Produto {
 
 	public void setPreco(float preco) {
 		this.preco = preco;
-	}
-
-	public String getCor() {
-		return cor;
-	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
 	}
 
 	public int getEstoque() {
@@ -93,5 +93,5 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
-}
+
+}	
