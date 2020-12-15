@@ -50,6 +50,14 @@ public class Categoria {
 		this.nome = nome;
 	}
 
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
+
 	public boolean isDisponivel() {
 		return disponivel;
 	}
