@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { UserLogin } from '../Model/UserLogin';
 import { Usuario } from "../Model/Usuario";
 
@@ -19,7 +20,7 @@ export class AuthService {
   }
 
   btnSair() {
-    let ok = false;
+    let ok = false
     let token = localStorage.getItem('token')
 
     if (token != null) {
@@ -30,7 +31,7 @@ export class AuthService {
   }
 
   btnLogin() {
-    let ok = false;
+    let ok = false
     let token = localStorage.getItem('token')
 
     if (token == null) {
