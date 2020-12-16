@@ -22,6 +22,7 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { AboutComponent } from './about/about.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AboutComponent } from './about/about.component';
     PutProdutoComponent,
     PutCategoriaComponent,
     AlertasComponent,
-    AboutComponent
+    AboutComponent,
+    CarrinhoComponent
 
   ],
   imports: [

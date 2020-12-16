@@ -1,5 +1,3 @@
-/* footer social icons */
-
 ul.social-network {
   list-style: none;
   display: inline;
@@ -13,12 +11,12 @@ ul.social-network li {
   padding: 5px;
 }
 
-.faFacebook, .faInstagram, .faLinkedin {
+.faGithub, .faInstagram, .faLinkedin {
   color: #000000;
 }
 
-.faFacebook:hover {
-  color: #3b5998
+.faGithub:hover {
+  color: #2e2d2d;
 }
 
 .faInstagram:hover {
@@ -26,6 +24,23 @@ ul.social-network li {
 }
 
 .faLinkedin:hover {
+  color: #0072b1;
+}
+.corjumbo {
+  background-color: #ddd9ce ;
+}
+
+/*texto*/
+
+.txt{
+  font-size: 8vw;
+}
+
+@media screen and (min-width: 650px){
+  .txt{
+    font-size: 5vw;
+  }
+}nkedin:hover {
   color: #0072b1;
 }
 .corjumbo {
