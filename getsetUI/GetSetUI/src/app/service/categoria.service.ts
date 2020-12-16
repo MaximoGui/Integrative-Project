@@ -11,16 +11,15 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers: new HttpHeaders().set('Authorization',
-    localStorage.getItem('token')!)
+    headers: new HttpHeaders().set('Authorization',localStorage.getItem('token')!)
   }
 
   getAllCategorias(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>('http://localhost:9000/categorias', this.token)
+    return this.http.get<Categoria[]>('http://localhost:9000/categorias',this.token)
   }
 
   getByIdCategoria(id: number): Observable<Categoria> {
-    return this.http.get<Categoria>(`http://localhost:9000/categorias/${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:9000/categorias/${id}`,this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {
@@ -28,7 +27,7 @@ export class CategoriaService {
   }
 
   putCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.put<Categoria>('http://localhost:9000/categorias', this.token)
+    return this.http.put<Categoria>('http://localhost:9000/categorias',categoria, this.token)
   }
 
   deleteCategoria(id: number) {

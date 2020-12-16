@@ -31,7 +31,7 @@ export class PutProdutoComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
 
-    this.idCategoria = this.route.snapshot.params["id"]
+    this.idProduto = this.route.snapshot.params["id"]
     this.findByIdProduto(this.idProduto)
 
     this.findAllCategorias()
@@ -65,7 +65,7 @@ export class PutProdutoComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria =resp;
     })
   }

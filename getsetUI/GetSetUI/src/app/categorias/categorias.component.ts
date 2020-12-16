@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto';
 import { AlertasService } from '../service/alertas.service';
@@ -40,10 +41,10 @@ export class CategoriasComponent implements OnInit {
   }
 
   publicar() {
-    this.categoria.id = this.idCategoria;
-    this.produto.categoria = this.categoria;
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
 
-    if (this.produto.nome == null ||  this.produto.categoria == null) {
+    if (this.produto.nome == null ||  this.produto.tecnologia == null || this.produto.categoria == null || this.categoria.nome == null) {
       this.alert.showAlertInfo('Preencha todos os campos antes de publicar!')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
@@ -75,7 +76,7 @@ export class CategoriasComponent implements OnInit {
   }
 
   findByNomeProduto() {
-    if( this.nome ==='') {
+    if( this.nome === '') {
       this.findAllProdutos()
     } else {
       this.produtoService.getByNomeProduto(this.nome).subscribe((resp: Produto[]) => {
