@@ -4,29 +4,58 @@
 <!--POG-->
 <div class="row mt-5 mb-5"></div>
 <!--/POG-->
-<div class="container border">
-    <div class="row mt-5 mb-5">
-      <div class="col-md-12 d-flex justify-content-center">
-        <img class="" src="https://i.imgur.com/drkMQvJ.gif" alt="">
+
+<div class="container w-100 d-flex justify-content-center">
+  <div class="card bg-light col-md-12 col-lg-8 col-sm-12 w-100 d-flex justify-content-center">
+    <div class="row w-100 d-flex justify-content-center">
+      <div class="col-md-5 col-lg-4 col-sm-12 d-flex justify-content-center imagem-fundo w-100">
+
+      </div>
+      <div class="col-md-7 col-lg-8 col-sm-12 d-flex justify-content-center">
+        <article class="card-body" style="max-width: 600px;">
+          <h2 class="card-title mt-1 text-center">Login</h2>
+          <p class="text-center"></p>
+          <p class="divider-text">
+            <span class="bg-light">Insira</span>
+          </p>
+          <form>
+           <!-- form-group// -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <div class="row w-100">
+                <div class="col-12">
+                  <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
+                [(ngModel)]='userLogin.email' name="first">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                <small id="emailHelp" class="form-text text-muted d-flex justify-content-center">Seu e-mail estará seguro!</small>
+              </div>
+              </div>
+                
+            </div> <!-- form-group// -->
+         
+            
+            <!-- form-group// -->
+
+            <!-- form-group end.// -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]='userLogin.senha' name="first">
+            </div> <!-- form-group// -->
+            <div class="form-group d-flex justify-content-center">
+              <button type="submit" class="btn btn-outline-dark w-27" (click)='entrar()'>Entrar</button>
+            </div> <!-- form-group// -->
+            <p class="text-center">Não tem cadastro? <a href="">Cadastrar</a> </p>
+          </form>
+        </article>
       </div>
     </div>
-    <div class="row mb-5 d-flex justify-content-center">
-      <div class="col-md-6">
-        <div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Endereço de e-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu e-mail" [(ngModel)]='userLogin.email'>
-            <small id="emailHelp" class="form-text text-muted">Seu e-mail estará seguro!</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]='userLogin.senha'>
-          </div>
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-outline-dark w-25" (click)='entrar()'>Entrar</button>
-          </div>
-  
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> <!-- card.// -->
+
+</div>

@@ -72,3 +72,45 @@ p.card-text {
     filter: drop-shadow(1px 2px 5px #444444);
 }
 
+/*Mobile*/
+.texto-responsivo{
+    font-size: 3.5vw;
+}
+
+.titulo-responsivo{
+    font-size: 5.5vw;
+}
+
+/*Tablet pequeno*/
+@media only screen and (max-width: 769px) and (min-width: 500px){
+    .texto-responsivo{
+        font-size: 2vw;
+    }
+    .titulo-responsivo{
+        font-size: 4vw;
+    }
+}
+
+/*Tablet grande*/
+@media only screen and (max-width: 1000px) and (min-width: 770px){
+    .texto-responsivo{
+        font-size: 2vw;
+    }
+    .titulo-responsivo{
+        font-size: 3.5vw;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1000px){
+    .texto-responsivo{
+        font-size: 1.6vw;
+    }
+    .titulo-responsivo{
+        font-size: 3.3vw;
+    }
+}
+
+
+
+
