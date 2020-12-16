@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserLogin } from '../Model/UserLogin';
 import { AuthService } from '../service/auth.service';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +12,8 @@ import { AuthService } from '../service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  faEnvelope = faEnvelope
+  faCoffee = faCoffee;
   userLogin:UserLogin = new UserLogin();
 
   constructor(
