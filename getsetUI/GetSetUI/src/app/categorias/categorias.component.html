@@ -15,10 +15,15 @@
             </div>
 
             <div class="form-group">
-                <label class="text-monospace" for="tecnologia">Tecnologia(Tema):</label>
+                <label class="text-monospace" for="tecnologia">Descrição:</label>
                 <textarea class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia(tema)"
                     [(ngModel)]='produto.tecnologia'></textarea>
-                <small class="text-danger">*Digite no minimo 10 caracteres</small>
+            </div>
+
+            <div class="form-group">
+                <label class="text-monospace" for="preco">Preço:</label>
+                <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco do produto"
+                    [(ngModel)]='produto.preco'>
             </div>
 
             <div class="row d-flex align-items-end">
@@ -65,7 +70,7 @@
                     <div class="row mt-3 mb-3">
                         <div class="col-md-10 pr-0">
                             <input class="form-control w-100" type="search" placeholder="Pesquisar produtos"
-                                aria-label="Pesquisar" [(ngModel)]='nome'>
+                                aria-label="Pesquisar" [(ngModel)]='nomeProduto'>
                         </div>
                         <div class="col-md-2 pl-0">
                             <button class="btn btn-outline-warning w-100" type="button"
