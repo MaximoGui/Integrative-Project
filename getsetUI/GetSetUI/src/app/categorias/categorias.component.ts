@@ -24,7 +24,7 @@ export class CategoriasComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
-  nome: string;
+  nomeProduto: string;
   
   constructor(
     private produtoService: ProdutosService,
@@ -76,11 +76,12 @@ export class CategoriasComponent implements OnInit {
   }
 
   findByNomeProduto() {
-    if( this.nome === '') {
+    if( this.nomeProduto === '') {
       this.findAllProdutos()
     } else {
-      this.produtoService.getByNomeProduto(this.nome).subscribe((resp: Produto[]) => {
+      this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produto[]) => {
         this.listaProdutos = resp;
+        console.log()
       })
     }
   }
