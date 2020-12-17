@@ -42,7 +42,7 @@ p.card-text {
 
 .card:hover{
     transform: scale(1.01);
- box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
 .hr3 {
@@ -57,6 +57,13 @@ p.card-text {
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
+  }
+
+  .fundoBanner {
+    background-image: url("https://images.pexels.com/photos/101639/pexels-photo-101639.jpeg?cs=srgb&dl=pexels-monoar-rahman-101639.jpg&fm=jpg"); 
+    width: 100%;
+    height: 100%;
+
   }
 
   @media only screen and (max-width: 990px){
@@ -111,6 +118,21 @@ p.card-text {
     }
 }
 
-
-
+.gradiente-texto {
+    
+    background-color: rgb(255, 104, 4);
+    
+    
+    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    
+    
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: transform .2s;
+  }
 

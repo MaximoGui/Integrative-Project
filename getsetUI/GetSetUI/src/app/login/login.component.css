@@ -39,3 +39,21 @@
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
 }
+
+  .gradiente-texto {
+    
+    background-color: rgb(255, 104, 4);
+    
+    
+    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    
+    
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+  }
