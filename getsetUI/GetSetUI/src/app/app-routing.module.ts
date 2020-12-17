@@ -12,6 +12,7 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
@@ -20,13 +21,14 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'cadastro', component: CadastroComponent},
   {path:'categorias', component: CategoriasComponent},
+  {path:'produtos', component: ProdutosComponent},
   {path:'cadastro-categorias', component: PostCategoriasComponent},
   {path:'editar-produto/:id', component: PutProdutoComponent},
   {path:'editar-categoria/:id', component: PutCategoriaComponent},
   {path:'delete-produto/:id', component: DeleteProdutoComponent},
   {path:'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path:'about', component: AboutComponent},
-  {path: 'carrinho', component: CarrinhoComponent},
+  {path:'carrinho', component: CarrinhoComponent},
 
 ];
 

@@ -9,6 +9,7 @@ import { Usuario } from "../Model/Usuario";
 })
 export class AuthService {
 
+  
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
@@ -39,5 +40,15 @@ export class AuthService {
     }
 
     return ok;
+  }
+
+  userAdmin(adminNome: string) {
+    let ok = false
+    if(adminNome == 'true') {
+      ok = true
+    }else {
+      ok = false
+    }
+    return ok
   }
 }

@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  userLogin:UserLogin = new UserLogin();
+  userLogin: UserLogin = new UserLogin();
 
   constructor(
     private authService: AuthService,
@@ -22,11 +22,22 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
-    this.authService.logar(this.userLogin).subscribe((resp:any = UserLogin) => {
-      this.userLogin = resp
-      localStorage.setItem('token', this.userLogin.token)
-      this.router.navigate(['/home'])
-    })
+    if (this.userLogin.email === 'admin@getset.com') {
+      this.userLogin.admin = true
+      console.log(this.userLogin.admin)
+      this.authService.logar(this.userLogin).subscribe((resp: any = UserLogin) => {
+        this.userLogin = resp
+        localStorage.setItem('token', this.userLogin.token)
+        this.router.navigate(['/home'])
+      })
+    } else {
+      this.userLogin.admin = false
+      console.log(this.userLogin.admin)
+      this.authService.logar(this.userLogin).subscribe((resp:any = UserLogin) => {
+        this.userLogin = resp
+        localStorage.setItem('token', this.userLogin.token)
+        this.router.navigate(['/home'])
+      })
+    }
   }
-
 }
