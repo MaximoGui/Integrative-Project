@@ -1,0 +1,81 @@
+p.card-text {
+    max-width: 40ch;
+    max-height: 40ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.imagens {
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .2s transform cubic-bezier(.155,1.105,.295,1.12),.2s box-shadow,.2s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.card:hover{
+    transform: scale(1.01);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.hr3 {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #cecac1, transparent);  
+  }
+
+  .fundoJumbo {
+    background: url("https://app.kiakiaprint.com/storage/gallery/custom-mugs-banner-kiakia-print_1599497757.jpg") ; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+
+  
+/*Mobile*/
+.texto-responsivo{
+    font-size: 3.5vw;
+}
+
+.titulo-responsivo{
+    font-size: 5.5vw;
+}
+
+/*Tablet pequeno*/
+@media only screen and (max-width: 769px) and (min-width: 500px){
+    .texto-responsivo{
+        font-size: 2vw;
+    }
+    .titulo-responsivo{
+        font-size: 4vw;
+    }
+}
+
+/*Tablet grande*/
+@media only screen and (max-width: 1000px) and (min-width: 770px){
+    .texto-responsivo{
+        font-size: 2vw;
+    }
+    .titulo-responsivo{
+        font-size: 3.5vw;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1000px){
+    .texto-responsivo{
+        font-size: 1.6vw;
+    }
+    .titulo-responsivo{
+        font-size: 3.3vw;
+    }
+}
+
+.half {
+    width: 50vw;
+}
+

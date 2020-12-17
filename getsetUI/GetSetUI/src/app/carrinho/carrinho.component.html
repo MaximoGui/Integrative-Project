@@ -2,19 +2,17 @@
     <div class="row mt-5 mb-5">
       
         <div class="col-md-12">
-            <div class="card mt-5">
+            <div class="d-flex justify-content-center mt-5">
 
-                <div class="card-body">
-                    <p class="card-text" aria-describedby="texto">{{produto.nome}} </p>
-                </div>
+                <h1>Em breve novidades....</h1>
             </div>
 
             <hr class="mt-4 mb-4">
 
-            <h5 class="text-center">Tem certeza que deseja realizar a compra?</h5>
+            <h5 class="text-center">Continue dando uma olhada em nossos produtos</h5>
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-outline-dark mr-3" (click)="btnSim()">Sim</button>
-                <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
+                <button class="btn btn-outline-dark mr-3" routerLink='/produtos'>Produtos</button>
+                <button class="btn btn-outline-danger" routerLink='/home'>Home</button>
             </div>
         </div>
 

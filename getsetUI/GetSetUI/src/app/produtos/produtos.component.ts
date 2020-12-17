@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto';
 import { AlertasService } from '../service/alertas.service';
@@ -8,11 +7,11 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
 
 @Component({
-  selector: 'app-categorias',
-  templateUrl: './categorias.component.html',
-  styleUrls: ['./categorias.component.css']
+  selector: 'app-produtos',
+  templateUrl: './produtos.component.html',
+  styleUrls: ['./produtos.component.css']
 })
-export class CategoriasComponent implements OnInit {
+export class ProdutosComponent implements OnInit {
 
   key ='data';
   reverse = true;
@@ -31,6 +30,7 @@ export class CategoriasComponent implements OnInit {
     private categoriaService: CategoriaService,
     private alert: AlertasService,
     private router: Router
+
   ) { }
 
   ngOnInit() {
@@ -95,4 +95,5 @@ export class CategoriasComponent implements OnInit {
       })
     } 
   }
+
 }

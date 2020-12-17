@@ -23,6 +23,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     PutCategoriaComponent,
     AlertasComponent,
     AboutComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    ProdutosComponent
 
   ],
   imports: [
