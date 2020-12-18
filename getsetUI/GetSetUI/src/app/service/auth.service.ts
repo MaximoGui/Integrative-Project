@@ -13,11 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
-    return this.http.post('http://localhost:9000/usuarios/logar', userLogin)
+    return this.http.post('https://app-getset.heroku.com/usuarios/logar', userLogin)
   }
 
   cadastrar(usuario: Usuario) {
-    return this.http.post('http://localhost:9000/usuarios/cadastrar', usuario)
+    return this.http.post('https://app-getset.heroku.com/usuarios/cadastrar', usuario)
   }
 
   btnSair() {
