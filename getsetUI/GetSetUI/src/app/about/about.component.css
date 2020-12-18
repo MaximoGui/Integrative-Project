@@ -5,8 +5,26 @@
   padding: 0;
 }
 
+.letra{
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.texto-m{
+  margin-top: 0px;
+}
+
+.img-rs > img {
+  height: auto;
+  width: 100%;
+}
+
+.objetivo:hover {
+  color: #fef25b;
+}
+
 cardgs{
-  font-family: 'Raleway', sans-serif;
+  font-family: averta_stdregular;
   font-size: 14px;
   font-weight: 400;
   color: #777;
@@ -21,6 +39,11 @@ h3{
   color: #333;
   font-weight: bold;
 }
+
+.card-body > p {
+  word-wrap: break-word;
+}
+
 #team img{
   margin-top: -50px;
 }
@@ -36,16 +59,16 @@ h3{
 #team .card{
   margin: 100px 10px 20px 10px;
   border-radius: 0;
-  box-shadow: 5px 5px 15px #F2B419;
+  box-shadow: 5px 5px 15px #fef25b;
   transition: all 0.4s ease-in;
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
-  height: 400x;
+  height: 450px;
 }
 
 #team .card:hover{
-  background: #F2B419;
-  color: #fff;
+  background: #fef25b;
+  color: #838282;
   border-radius: 5px;
   border: none;
   box-shadow: 5px 5px 10px #9e9e9e;
