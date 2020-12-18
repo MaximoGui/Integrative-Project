@@ -81,20 +81,56 @@
 }
 
 
-  .gradiente-texto {
+.gradiente-texto {
     
-    background-color: rgb(255, 104, 4);
-    
-    
-    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
-    
-    
-    background-size: 100%;
-    background-repeat: repeat;
-    
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    
-  }
+  background-color: rgb(255, 104, 4);
+  
+  
+  background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+  
+  
+  background-size: 100%;
+  background-repeat: repeat;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  
+}
+
+.gradiente-botao {
+  
+  background-color: rgb(61, 61, 61);
+  
+  
+  background-image: linear-gradient(45deg, #000000, #424242);
+  
+  
+  background-size: 100%;
+  background-repeat: repeat;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.gradiente-botao:hover {
+  
+  background-color: rgb(255, 104, 4);
+  
+  
+  background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+  
+  
+  background-size: 100%;
+  background-repeat: repeat;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  
+}

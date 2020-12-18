@@ -13,24 +13,24 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav d-flex mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/home'>Home <span
+        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/home'>Home <span
             class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/produtos'>Produtos</a>
+        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/produtos'>Produtos</a>
       </li>
 
       <li class="nav-item ">
-        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/categorias'>Categorias</a>
+        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/categorias'>Categorias</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/about'>Sobre nós</a>
+        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/about'>Sobre nós</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-uppercase font-weight-bold p-3" routerLink='/contato'>Contato</a>
+        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/contato'>Contato</a>
       </li>
 
     </ul>
@@ -39,19 +39,19 @@
 
         <div *ngIf='auth.btnLogin()' class="p-2">
           <li class="nav-item d-flex">
-            <button type="button" class="btn btn-dark" routerLink='/login'>Login</button>
+            <a class=" nav-link gradiente-texto" routerLink='/login'>Login</a>
           </li>
         </div>
 
         <div *ngIf='auth.btnLogin()' class="p-2">
           <li class="nav-item">
-            <button type="button" class="btn btn-dark" routerLink='/login' routerLink='/cadastro'>Cadastro</button>
+            <a class=" nav-link gradiente-texto" routerLink='/login' routerLink='/cadastro'>Cadastro</a>
           </li>
         </div>
 
         <div *ngIf='auth.btnSair()'>
           <li class="nav-item">
-            <a class="nav-link text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+            <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" (click)='sair()'>Sair</a>
           </li>
         </div>
     </ul>

@@ -79,6 +79,10 @@ p.card-text {
     filter: drop-shadow(1px 2px 5px #444444);
 }
 
+#mainSlider .carousel-inner, #mainSlider .carousel-item{
+    height: 40vh;
+}
+
 /*Mobile*/
 .texto-responsivo{
     font-size: 3.5vw;
@@ -96,6 +100,10 @@ p.card-text {
     .titulo-responsivo{
         font-size: 4vw;
     }
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: 55vh;
+    }
 }
 
 /*Tablet grande*/
@@ -106,6 +114,10 @@ p.card-text {
     .titulo-responsivo{
         font-size: 3.5vw;
     }
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: 70vh;
+    }
 }
 
 /*Desktop*/
@@ -115,6 +127,10 @@ p.card-text {
     }
     .titulo-responsivo{
         font-size: 3.3vw;
+    }
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: 94vh;
     }
 }
 
@@ -135,4 +151,44 @@ p.card-text {
     -moz-text-fill-color: transparent;
     transition: transform .2s;
   }
+
+.container-fluid{
+    padding: 0px;
+}
+
+#mainSlider .carousel-caption{
+    top: 30%;
+}
+
+#mainSlider .carousel-caption h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p{
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    background-color: #ff0000;
+    color: #fff;
+    text-transform: uppercase;
+    width: 300px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    border-color: #00ff00;
+}
+
+
 
