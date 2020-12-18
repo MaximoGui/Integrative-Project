@@ -3,3 +3,98 @@
     height: 73vh;
 }
 
+#map_canvas {
+    width: 500px;
+    height: 400px;
+  }
+
+  #googlemaps {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+  }
+  
+  #contactform {
+    position: relative;
+    z-index: 1; /* The z-index should be higher than Google Maps */
+    width: 300px;
+    margin: 60px auto 0;
+    padding: 10px;
+    background: black;
+    height: auto;
+    opacity: .45; /* Set the opacity for a slightly transparent Google Form */
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+  .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
+ .card{
+    box-shadow: 10px 10px 8px #888888;
+ }
+
+.imagem-fundo{
+    background: url("../../assets/imagens/fundo1.jpg") ; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+  .gradiente-texto {
+    
+    background-color: rgb(255, 104, 4);
+    
+    
+    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    
+    
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+  }
