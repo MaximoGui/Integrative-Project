@@ -106,7 +106,7 @@
                                 <div class="card-body">
                                     <p class="card-text" aria-describedby="texto">{{item.tecnologia}} </p>
                                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                                        Postado: ???
+                                        Canecas GetSet
                                     </small>
                                 </div>
                             </div>
@@ -131,26 +131,24 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12" *ngFor="let item of listaCategorias | orderBy : key : reverse">
-                            <div *ngFor='let post of item.produto'>
+                        <div class="col-md-12">
 
-                                <div class="card mt-5 mb-5">
-                                    <div class="card-header">
-                                        <div class="row d-flex align-items-center">
-                                            <div class="col-md-12">
-                                                <h5 class="card-title"> {{post.nome}} </h5>
-                                            </div>
+                            <div class="card mt-5 mb-5" *ngFor="let item of listaCategorias | orderBy : key : reverse">
+                                <div class="card-header" *ngFor='let post of item.produto'>
+                                    <div class="row d-flex align-items-center ">
+                                        <div class="col-md-12">
+                                            <h5 class="card-title" > {{post.nome}}</h5>
                                         </div>
                                     </div>
-
-                                    <div class="card-body">
-                                        <p class="card-text" aria-describedby="texto"> {{post.tecnologia}} </p>
-                                        <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                                    <div class="card-body ">
+                                        <p class="card-text " aria-describedby="texto"> {{post.tecnologia}} </p>
+                                        <small id="texto" class="form-text  text-muted mb-3 text-monospace">
                                         </small>
                                     </div>
-
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
 
@@ -160,3 +158,10 @@
         </div>
     </div>
 </div>
+
+<!-- Copyright -->
+<div class="footer-copyright corcopy text-center py-3 cor">
+    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
+    <a class="text-dark"></a>
+</div>
+<!-- Copyright -->

@@ -1,51 +1,66 @@
 <div class="container">
 
-<!--POG-->
-<div class="row mt-5 mb-5"></div>
-<!--/POG-->
+  <!--POG-->
+  <div class="row mt-5 mb-5"></div>
+  <!--/POG-->
 
-    <div class="row mt-5 mb-5">
-      
-      <div class="col-md-12">
-        <h3 class="text-center mb-4 text-monospace">Cadastre uma nova categoria</h3>
-  
-        <div class="form-group">
-          <label class="text-monospace" for="texto">Nome da categoria:</label>
-          <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a nova categoria" [(ngModel)]='categoria.nome'>
+  <div class="row mt-5 mb-5">
+
+    <div class="col-md-12">
+      <h3 class="text-center mb-4 text-monospace">Cadastre uma nova categoria</h3>
+
+      <div class="form-group">
+        <label class="text-monospace" for="texto">Nome da categoria:</label>
+        <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a nova categoria"
+          [(ngModel)]='categoria.nome'>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
         </div>
-        <div class="row mb-5">
-          <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
+      </div>
+
+      <hr>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="text-center text-monospace">Lista de categorias</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" *ngFor="let item of listaCategorias | orderBy : key : reverse">
+          <div class="card mt-5 mb-5">
+            <div class="card-header">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-12">
+                  <h5 class="card-title"> {{item.nome}} </h5>
+                </div>
+                <div class="col-md-12 d-flex justify-content-end">
+
+                  <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-categoria', item.id]">
+                    Editar
+                  </button>
+
+                  <button class="btn btn-outline-danger ml-3 " [routerLink]="['/delete-categoria', item.id]">
+                    Apagar
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-  
-        <hr>
-  
-        <div class="row mt-5">
-          <div class="col-md-12">
-            <h4 class="text-center text-monospace">Lista de categorias</h4>
-          </div>
-        </div>
-  
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Descrição</th>
-              <th scope="col" class="d-flex justify-content-end">Modificações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor='let item of listaCategorias'>
-              <th scope="row">{{ item.id }}</th>
-              <td>{{item.disponivel}}</td>
-                <td class="d-flex justify-content-end">
-                  <a class="btn btn-outline-info mr-3"[routerLink]="['/editar-categoria', item.id]">Editar</a>
-                  <a class="btn btn-outline-danger" [routerLink]="['/delete-categoria', item.id]">Apagar</a>
-                </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
+  </div>
 </div>
+
+
+<hr>
+
+<!-- Copyright -->
+<div class="footer-copyright corcopy text-center py-3 cor">
+  <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
+  <a class="text-dark"></a>
+</div>
+<!-- Copyright -->
