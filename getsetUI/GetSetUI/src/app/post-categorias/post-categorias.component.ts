@@ -11,6 +11,9 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class PostCategoriasComponent implements OnInit {
 
+  key ='data';
+  reverse = true;
+
   categoria: Categoria = new Categoria();
   listaCategorias: Categoria[];
 
@@ -21,6 +24,9 @@ export class PostCategoriasComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+
+    this.findAllCategorias()
   }
 
   findAllCategorias() {

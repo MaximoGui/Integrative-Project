@@ -3,7 +3,7 @@
     <!--POG-->
     <div class="row mt-5 mb-5"></div>
     <!--/POG-->
-    
+
     <div class="row mt-5 mb-5">
         <div class="col-md-12">
             <div>
@@ -20,9 +20,11 @@
                 </div>
 
                 <div class="form-group m-0">
-                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink="/cadastro-categoria">Cadastre
+                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a
+                            routerLink="/cadastro-categoria">Cadastre
                             um novo</a></label>
-                    <select name="categoria" id='categoria' [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control">
+                    <select name="categoria" id='categoria' [(ngModel)]="idCategoria" (change)="findByIdCategoria()"
+                        class="form-control">
                         <option *ngFor="let item of listaCategorias" value={{item.id}}>
                             {{item.nome}}
                         </option>
@@ -36,3 +38,12 @@
         </div>
     </div>
 </div>
+
+<hr>
+
+<!-- Copyright -->
+<div class="footer-copyright corcopy text-center py-3 cor">
+    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
+    <a class="text-dark"></a>
+</div>
+<!-- Copyright -->

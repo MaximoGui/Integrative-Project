@@ -12,6 +12,7 @@ import { AlertasService } from '../service/alertas.service';
 export class DeleteCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
+
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
@@ -22,7 +23,7 @@ export class DeleteCategoriaComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
     let id: number = this.route.snapshot.params['id'];
-    this.findByIdcategoria
+    this.findByIdcategoria(id)
   }
 
   findByIdcategoria (id: number){

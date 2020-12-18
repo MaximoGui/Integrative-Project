@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 
+
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
