@@ -23,7 +23,7 @@ export class ContatoComponent implements OnInit {
   }
 
   publicar() {
-    if(this.user.email == '') {
+    if(this.user.email === '') {
       this.alert.showAlertDanger('Preencha todos os campos corretamente!')
     }else{
       this.router.navigate(['/home'])

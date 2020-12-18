@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 import { UserLogin } from '../Model/UserLogin';
 import { Usuario } from "../Model/Usuario";
@@ -13,16 +14,16 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
-    return this.http.post('http://localhost:9000/usuarios/logar', userLogin)
+    return this.http.post('https://thegetset.herokuapp.com/usuarios/logar', userLogin)
   }
 
   cadastrar(usuario: Usuario) {
-    return this.http.post('http://localhost:9000/usuarios/cadastrar', usuario)
+    return this.http.post('https://thegetset.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
   btnSair() {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = environment.token
 
     if (token != null) {
       ok = true
@@ -33,7 +34,7 @@ export class AuthService {
 
   btnLogin() {
     let ok = false
-    let token = localStorage.getItem('token')
+    let token = environment.token
 
     if (token == null) {
       ok = true
@@ -42,9 +43,11 @@ export class AuthService {
     return ok;
   }
 
-  userAdmin(adminNome: string) {
+  userAdmin() {
     let ok = false
-    if(adminNome == 'true') {
+    let admin = environment.admin
+
+    if(admin == true) {
       ok = true
     }else {
       ok = false
