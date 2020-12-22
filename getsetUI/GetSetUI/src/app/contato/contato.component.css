@@ -1,3 +1,11 @@
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+p{
+  letter-spacing: 1px;
+  font-size: 16px;
+}
 
 .fundo {
     height: 73vh;

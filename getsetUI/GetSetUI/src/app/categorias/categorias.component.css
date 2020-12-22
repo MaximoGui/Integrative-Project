@@ -1,3 +1,12 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+p{
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
 p.card-text {
     max-width: 40ch;
     max-height: 40ch;
