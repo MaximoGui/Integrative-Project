@@ -16,8 +16,14 @@
 
             <div class="form-group">
                 <label class="text-monospace" for="tecnologia">Descrição:</label>
-                <textarea class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia(tema)"
+                <textarea type="text" class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia(tema)"
                     [(ngModel)]='produto.tecnologia'></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="text-monospace" for="imagem">Imagem:</label>
+                <textarea type="text" class="form-control" id="imagem" placeholder="Coloque aqui a url da imagem"
+                    [(ngModel)]='produto.imagem'></textarea>
             </div>
 
             <div class="form-group">

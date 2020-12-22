@@ -40,7 +40,7 @@
           *ngFor="let item of listaProdutos | orderBy : key reverse">
           <div class="card mr-4 ml-4 p-2" style="width: 16rem;">
             <img class="card-img-top cursor"
-              src="https://image.freepik.com/psd-gratuitas/canecas-brancas-com-maquete-de-cor-editavel_149660-64.jpg"
+              src="{{item.imagem}}"
               alt="Imagem de capa do card">
             <div class="card-body">
               <h4 class="card-title">{{item.nome}}</h4>
@@ -49,7 +49,7 @@
                 <div class="price text-success">
                   <h5 class="mt-4">R${{item.preco}}</h5>
                 </div>
-                <button type="button" class="btn btn-danger" routerLink='/carrinho'>Comprar</button>
+                <button type="button" class="btn btn-danger " routerLink='/carrinho'>Comprar</button>
               </div>
             </div>
           </div>

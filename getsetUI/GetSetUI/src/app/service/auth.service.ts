@@ -14,11 +14,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
-    return this.http.post('https://thegetset.herokuapp.com/usuarios/logar', userLogin)
+    return this.http.post('http://localhost:9000/usuarios/logar', userLogin)
   }
 
   cadastrar(usuario: Usuario) {
-    return this.http.post('https://thegetset.herokuapp.com/usuarios/cadastrar', usuario)
+    return this.http.post('http://localhost:9000/usuarios/cadastrar', usuario)
   }
 
   btnSair() {
@@ -43,16 +43,11 @@ export class AuthService {
     return ok;
   }
 
-  userAdmin() {
-    let ok = false
-    let admin = environment.admin
-
-    if(admin == true) {
-      ok = true
-    }else {
-      ok = false
-    }
-    return ok
+  btnAdmin() {
+    
   }
+
 }
+
+
 

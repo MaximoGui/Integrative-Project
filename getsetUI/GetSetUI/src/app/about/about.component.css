@@ -28,16 +28,16 @@ cardgs{
   font-family: averta_stdregular;
   font-size: 14px;
   font-weight: 400;
-  color: #777;
+  color: #000;
 }
 h1{
   font-size: 36px;
-  counter-reset: #555;
+  counter-reset: #000;
   font-weight: bold;
 }
 h3{
   font-size: 24px;
-  color: #333;
+  color: #000;
   font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ h3{
 
 #team i{
   font-size: 26px;
-  color: #555;
+  color: #000000;
 }
 #team p{
   font-weight: 500;
@@ -60,7 +60,7 @@ h3{
 #team .card{
   margin: 100px 10px 20px 10px;
   border-radius: 0;
-  box-shadow: 5px 5px 15px #fef25b;
+  box-shadow: 5px 5px 15px #17a2b8;
   transition: all 0.4s ease-in;
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
@@ -68,8 +68,8 @@ h3{
 }
 
 #team .card:hover{
-  background: #fef25b;
-  color: #838282;
+  background: #17a2b8;
+  color: #fff;
   border-radius: 5px;
   border: none;
   box-shadow: 5px 5px 10px #9e9e9e;
