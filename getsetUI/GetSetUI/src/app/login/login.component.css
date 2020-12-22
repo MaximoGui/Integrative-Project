@@ -4,6 +4,12 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+p{
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
 .divider-text span {
     padding: 7px;
     font-size: 12px;

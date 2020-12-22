@@ -3,11 +3,12 @@
 *{
   margin: auto;
   padding: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .letra{
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .texto-m{

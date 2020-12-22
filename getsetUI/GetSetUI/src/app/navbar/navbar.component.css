@@ -8,6 +8,11 @@ a{
     box-sizing: border-box;
 }
 
+p{
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
 .nav-link {
     color: #000000;
     
