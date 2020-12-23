@@ -43,8 +43,14 @@ export class AuthService {
     return ok;
   }
 
-  btnAdmin() {
-    
+  userAdmin() {
+    let ok = false
+    let admin = environment.admin
+
+    if (admin == true) {
+      ok = true
+    }
+    return ok
   }
 
 }

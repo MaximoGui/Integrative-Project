@@ -22,23 +22,21 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
-    environment.admin = this.userLogin.admin
-    if (this.userLogin.email === 'admin@getset.com') {
-      this.userLogin.admin = true
-      console.log(this.userLogin.admin)
-      this.authService.logar(this.userLogin).subscribe((resp: any = UserLogin) => {
-        this.userLogin = resp
+    this.authService.logar(this.userLogin).subscribe((resp: any = UserLogin) => {
+      this.userLogin = resp
+      environment.admin = this.userLogin.admin
+
+      if (this.userLogin.email == 'admin@getset.com') {
+        environment.admin = true
+        console.log(environment.admin)
         environment.token = this.userLogin.token
         this.router.navigate(['/home'])
-      })
-    } else {
-      this.userLogin.admin = false
-      console.log(this.userLogin.admin)
-      this.authService.logar(this.userLogin).subscribe((resp:any = UserLogin) => {
-        this.userLogin = resp
-        localStorage.setItem('token', this.userLogin.token)
+
+      } else {
+        environment.admin = false
+        environment.token = this.userLogin.token
         this.router.navigate(['/home'])
-      })
-    }
+      }
+    }) 
   }
 }
