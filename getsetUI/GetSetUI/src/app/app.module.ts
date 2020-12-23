@@ -24,6 +24,7 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
     AlertasComponent,
     AboutComponent,
     CarrinhoComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    DemoProdutoComponent
 
   ],
   imports: [

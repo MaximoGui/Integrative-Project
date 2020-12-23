@@ -1,3 +1,4 @@
+import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContatoComponent } from './contato/contato.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path:'about', component: AboutComponent},
   {path:'carrinho', component: CarrinhoComponent},
+  {path:'demo-produto', component: DemoProdutoComponent}
 
 ];
 

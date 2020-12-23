@@ -155,10 +155,6 @@ p.card-text {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     transition: transform .2s;
-  }
-
-.container-fluid{
-    padding: 0px;
 }
 
 #mainSlider .carousel-caption{

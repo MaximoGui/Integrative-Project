@@ -5,13 +5,10 @@
 }
 
 *{
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
-* {
-  font-family: 'Montserrat', sans-serif;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+*{
+  font-family: 'Quicksand', sans-serif;
 }
 
