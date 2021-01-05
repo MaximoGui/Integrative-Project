@@ -15,9 +15,9 @@
             </div>
 
             <div class="form-group">
-                <label class="text-monospace" for="tecnologia">Descrição:</label>
-                <textarea type="text" class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia(tema)"
-                    [(ngModel)]='produto.tecnologia'></textarea>
+                <label class="text-monospace" for="descricao">Descrição:</label>
+                <textarea type="text" class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descricao(tema)"
+                    [(ngModel)]='produto.descricao'></textarea>
             </div>
 
             <div class="form-group">
@@ -30,6 +30,12 @@
                 <label class="text-monospace" for="preco">Preço:</label>
                 <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco do produto"
                     [(ngModel)]='produto.preco'>
+            </div>
+
+            <div class="form-group">
+                <label class="text-monospace" for="estoque">Estoque:</label>
+                <input type="text" class="form-control" id="estoque" placeholder="Digite aqui a quantidade no estoque"
+                    [(ngModel)]='produto.estoque'>
             </div>
 
             <div class="row d-flex align-items-end">
@@ -110,7 +116,7 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <p class="card-text" aria-describedby="texto">{{item.tecnologia}} </p>
+                                    <p class="card-text" aria-describedby="texto">{{item.descricao}} </p>
                                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                                         Canecas GetSet
                                     </small>

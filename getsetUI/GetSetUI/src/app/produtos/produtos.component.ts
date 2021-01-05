@@ -44,7 +44,7 @@ export class ProdutosComponent implements OnInit {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
-    if (this.produto.nome == null ||  this.produto.tecnologia == null || this.produto.categoria == null || this.categoria.nome == null) {
+    if (this.produto.nome == null ||  this.produto.descricao == null || this.produto.categoria == null || this.categoria.nome == null) {
       this.alert.showAlertInfo('Preencha todos os campos antes de publicar!')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {

@@ -10,19 +10,31 @@
                 <div class="form-group">
                     <label for="nome">Nome do produto</label>
                     <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
-                        placeholder="Digite aqui o nome" [(ngModel)]="produto.nome">
+                        placeholder="Digite aqui o nome do produto" [(ngModel)]="produto.nome">
                 </div>
 
                 <div class="form-group">
-                    <label for="tecnologia">Tecnologia do produto</label>
-                    <textarea class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia"
-                        [(ngModel)]="produto.tecnologia"></textarea>
+                    <label for="descricao">Descricao do produto</label>
+                    <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descricao"
+                        [(ngModel)]="produto.descricao"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="text-monospace" for="imagem">Imagem:</label>
                     <textarea type="text" class="form-control" id="imagem" placeholder="Coloque aqui a url da imagem"
                         [(ngModel)]='produto.imagem'></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="preco">Preço:</label>
+                    <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco do produto"
+                        [(ngModel)]='produto.preco'>
+                </div>
+    
+                <div class="form-group">
+                    <label class="text-monospace" for="estoque">Estoque:</label>
+                    <input type="text" class="form-control" id="estoque" placeholder="Digite aqui a quantidade no estoque"
+                        [(ngModel)]='produto.estoque'>
                 </div>
 
                 <div class="form-group m-0">
@@ -38,7 +50,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end mt-3">
-                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()" >Salvar</button>
                 </div>
             </div>
         </div>

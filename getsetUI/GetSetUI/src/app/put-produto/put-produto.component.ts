@@ -49,7 +49,7 @@ export class PutProdutoComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      this.router.navigate(['/categorias'])
+      this.router.navigate(['/produtos'])
       this.alert.showAlertSuccess('Produto atualizado com sucesso!')
     }, err => {
       if (err.status =='500'){
