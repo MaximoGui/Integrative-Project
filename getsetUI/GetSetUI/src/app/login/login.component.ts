@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../Model/UserLogin';
 import { AuthService } from '../service/auth.service';
+import { SocialAuthService } from "angularx-social-login";
+import { GoogleLoginProvider } from "angularx-social-login";
+import { SocialUser } from "angularx-social-login";
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 @Component({
   selector: 'app-login',
@@ -11,16 +15,21 @@ import { AuthService } from '../service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  user: SocialUser;
+  loggedIn: boolean;
+  GoogleLoginProvider = GoogleLoginProvider;
   userLogin: UserLogin = new UserLogin();
+  faGoogle = faGoogle
 
   constructor(
-    private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
+   
   }
-
+ 
   entrar() {
     this.authService.logar(this.userLogin).subscribe((resp: any = UserLogin) => {
       this.userLogin = resp
@@ -39,4 +48,5 @@ export class LoginComponent implements OnInit {
       }
     }) 
   }
+  
 }

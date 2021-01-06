@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
-import { ModalModule } from 'ngx-bootstrap/modal'
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +27,7 @@ import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
+import { LoginSocialComponent } from './login-social/login-social.component';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
     AboutComponent,
     CarrinhoComponent,
     ProdutosComponent,
-    DemoProdutoComponent
+    DemoProdutoComponent,
+    LoginSocialComponent
 
   ],
   imports: [
@@ -56,9 +60,25 @@ import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
     HttpClientModule,
     FormsModule,
     OrderModule,
+    SocialLoginModule,
     ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: true,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '1079583727679-mv59s7j1nhe8s2jrfpn50jbr8g3qjruo.apps.googleusercontent.com'
+            )
+          },
+        ]
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

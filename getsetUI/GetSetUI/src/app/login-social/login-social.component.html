@@ -1,0 +1,34 @@
+
+      <div class="container body-content">
+        <!-- Código html do botão de login -->
+        <div id="gSignInWrapper" *ngIf="!user" (click)="signInWithGoogle()">
+          <div id="customBtn" class="customGPlusSignIn">
+            <span class="icon"></span>
+            <span class="buttonText">Logar com o Google</span>
+          </div>
+        </div>
+        <div id="name"></div>
+      </div>
+
+
+    <div *ngIf="user" class="card text-center">
+      <h6 class="card-header">
+        GetSet
+      </h6>
+      <div class="card-block"></div>
+      <img *ngIf="user.photoUrl" class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+      <div class="card-block">
+        <h4 class="card-title">{{ user.name }}</h4>
+        <p class="card-text">{{ user.email }}</p>
+        <p class="card-text">Login com:  {{ user.provider }}</p>
+      </div>
+      <div class="card-block">
+        <button class="btn btn-danger" (click)="signOut()">Sair</button>
+      </div>
+
+      <!--<div class="card-block" *ngIf="user.provider === GoogleLoginProvider.PROVIDER_ID">
+        //<button class="btn" (click)="refreshGoogleToken()">Refresh google token</button>
+      </div></-->
+    </div>
+
+  

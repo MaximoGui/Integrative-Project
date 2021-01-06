@@ -1,0 +1,49 @@
+.bg-transparent {
+    background-color: transparent;
+  }
+  
+  :host {
+    height: 100%;
+  }
+  
+  .photo {
+    object-fit: contain;
+  }
+  
+  .card {
+    width: 20rem;
+    margin: 0 auto;
+  }
+  
+  #customBtn {
+    display: inline-block;
+    background: #4285f4;
+    color: white;
+    width: 250px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.label {
+    font-weight: bold;
+  }
+  span.icon {
+    background: url('https://i.imgur.com/FTHAOKas.png') transparent 5px 50% no-repeat;
+    background-size: 30px 30px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border-right: #2265d4 1px solid;
+  }
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
