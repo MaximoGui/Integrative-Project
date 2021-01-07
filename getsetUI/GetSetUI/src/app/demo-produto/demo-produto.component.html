@@ -22,7 +22,7 @@
                         <div class="carousel-item active">
                             <img class="d-block w-100"
                                 src="{{produto.imagem}}"
-                                alt="Girl">
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -31,12 +31,12 @@
                 <div class="col-lg-11 col-md-12 col-sm-12 d-flex w-100 justify-content-end">
                     <div class="card bg-light d-flex w-100 p-3">
                         <h3 class="d-flex justify-content-center mt-4">{{produto.nome}}</h3>
-                        <p class="d-flex justify-content-center ml-2">{{produto.descricao}}</p>
-                        <div class="row price text-success d-flex justify-content-around">
-                            <h4 class="mt-3"><strong>{{produto.preco}}</strong></h4>
-                            <p class="text-primary mt-3"><strong>{{produto.estoque}}</strong></p>
+                        <p class="d-flex justify-content-center ml-2">Sobre o produto: {{produto.descricao}}</p>
+                        <div class="row price text-success d-flex justify-content-around mt-5">
+                            <h4 class="mt-3"><strong>R$ {{produto.preco }}</strong></h4>
+                            <p class="text-primary mt-3"><strong>No estoque: {{produto.estoque}}</strong></p>
                         </div>
-                        <button type="button" routerLink="/carrinho" class="btn btn-outline-dark mt-5 mb-2 "><strong>Adicionar ao carrinho</strong></button>
+                        <button type="button" class="btn btn-outline-dark mt-5 mb-2"><strong>Adicionar ao carrinho</strong></button>
                         <button type="button" routerLink="/carrinho" class="btn btn-danger mt-3 mb-4"><strong>Comprar</strong></button>
                     </div>
                 </div>
@@ -48,68 +48,23 @@
             <h3 class="gradiente-texto d-flex justify-content-center">Produtos relacionados</h3>
         </div>
         <hr class="hr3">
-        <div class="row d-flex justify-content-center mb-1">
+        <div class="row d-flex justify-content-center mb-1" *ngFor='let produto of listaProdutos | orderBy : key : reverse'>
             <div class="col-lg-3 mt-3 col-md-12 d-flex justify-content-center p-0">
-                <div class="card mr-4 ml-4 p-2 card-active" style="width: 18rem;">
-                    <img class="card-img-top cursor" src="../../assets/imagens/Produtos/Caneca i++.jpg"
+                <div class="card mr-4 ml-4 p-2 card-active" style="width: 18rem;" >
+                    <img class="card-img-top cursor" src="{{produto.imagem}}"
                         alt="Imagem de capa do card">
                     <div class="card-body">
-                        <h4 class="card-title">Caneca increment</h4>
+                        <h4 class="card-title">{{produto.nome}}</h4>
                         <div class="buy d-flex justify-content-between align-items-center">
                             <div class="price text-success">
-                                <h5 class="mt-4">R$38,90</h5>
+                                <h5 class="mt-4">R$ {{produto.preco}}</h5>
                             </div>
                             <button type="button" routerLink="/carrinho" class="btn btn-danger">Comprar</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 mt-3 col-md-12 d-flex justify-content-center p-0">
-                <div class="card mr-4 ml-4 p-2 card-active" style="width: 18rem;">
-                    <img class="card-img-top cursor" src="../../assets/imagens/Produtos/Caneca i++.jpg"
-                        alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h4 class="card-title">Caneca increment</h4>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">R$38,90</h5>
-                            </div>
-                            <button type="button" routerLink="/carrinho" class="btn btn-danger">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 mt-3 col-md-12 d-flex justify-content-center p-0">
-                <div class="card mr-4 ml-4 p-2 card-active" style="width: 18rem;">
-                    <img class="card-img-top cursor" src="../../assets/imagens/Produtos/Caneca While.jpg"
-                        alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h4 class="card-title">Caneca While</h4>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">R$55,90</h5>
-                            </div>
-                            <button type="button" routerLink="/carrinho" class="btn btn-danger">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 mt-3 col-md-12 d-flex justify-content-center p-0">
-                <div class="card mr-4 ml-4 p-2 card-active" style="width: 18rem;">
-                    <img class="card-img-top cursor"
-                        src="https://a-static.mlcdn.com.br/1500x1500/caneca-dev-python-jps-info/jpsinfo/mlb1206913524/dd3e27c0b31882ae6978c4a22a538d2c.jpg"
-                        alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h4 class="card-title">Caneca Python</h4>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">R$39,90</h5>
-                            </div>
-                            <button type="button" routerLink="/carrinho" class="btn btn-danger">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>

@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto'
-import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
@@ -14,20 +13,22 @@ import { ProdutosService } from '../service/produtos.service';
 })
 export class DemoProdutoComponent implements OnInit {
 
+  key ='data';
+  reverse = true;
+  
   produto: Produto = new Produto();
-  ListaProdutos: Produto[];
+  listaProdutos: Produto[];
   prodId: number;
+  index: number = 0;
 
   categoria: Categoria = new Categoria();
-  listaCategorias: Categoria[];
-  categoriaId: number
+  prodCategorias: Categoria[];
+  categoriaId: number;
 
 
   constructor(
     private categoriaService: CategoriaService,
     private produtoService: ProdutosService,
-    private router: Router,
-    private alert: AlertasService,
     private route: ActivatedRoute,
     public auth: AuthService
   ) { }
@@ -37,8 +38,11 @@ export class DemoProdutoComponent implements OnInit {
       this.prodId = this.route.snapshot.params["id"],
       this.findByIdProduto(this.prodId)
 
-    this.categoriaId = this.route.snapshot.params["id"],
+      this.categoriaId = this.route.snapshot.params["id"],
       this.findByIdCategoria(this.categoriaId)
+
+    
+      this.findProdutoByCategoria(this.categoriaId)
   }
 
   findByIdProduto(idProd: number) {
@@ -53,5 +57,24 @@ export class DemoProdutoComponent implements OnInit {
     })
   }
 
-}
+  findAllCategorias() {
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
+      this.prodCategorias = resp
+    })
+  }
+
+  findByNomeCategoria() {
+      this.categoriaService.getByNomeCategoria(this.produto.categoria.nome).subscribe((resp: Categoria[]) => {
+        this.prodCategorias = resp;
+      })
+    } 
+
+    findProdutoByCategoria(categoriaId: number) {
+      this.categoriaService.getByIdCategoria(categoriaId).subscribe((resp: Categoria) => {
+        this.listaProdutos = resp.produto;
+      })
+    }
+  }
+
+
 

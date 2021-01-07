@@ -1,21 +1,45 @@
 <div class="container mt-5">
+
+    <!--POG-->
+    <div class="mt-5 mb-5"></div>
+    <!--/POG-->
     <div class="row mt-5 mb-5">
-      
+
         <div class="col-md-12">
-            <div class="d-flex justify-content-center mt-5">
-
-                <h1>No momento não estamos realizando transações</h1>
+            <div>
+                <h1 class="d-flex justify-content-center">Carrinho</h1>
             </div>
-
             <hr class="mt-4 mb-4">
 
-            <h5 class="text-center">Continue dando uma olhada em nossos produtos</h5>
-            <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-outline-dark mr-3" routerLink='/produtos'>Produtos</button>
-                <button class="btn btn-outline-danger" routerLink='/home'>Home</button>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card mt-5 mb-5">
+                        <div class="card-header">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-8">
+                                    <h5 class="card-title"> {{produto.nome}} </h5>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-end">
+
+                                    <button class="btn btn-outline-danger ml-3"
+                                        [routerLink]="['/delete-produto', produto.id]">
+                                        Apagar
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text" aria-describedby="texto">{{produto.descricao}} </p>
+                            <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                                Canecas GetSet
+                            </small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
-

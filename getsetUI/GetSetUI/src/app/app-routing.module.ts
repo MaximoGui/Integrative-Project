@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'delete-produto/:id', component: DeleteProdutoComponent},
   {path:'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path:'about', component: AboutComponent},
-  {path:'carrinho', component: CarrinhoComponent},
+  {path:'carrinho/:id', component: CarrinhoComponent},
   {path:'demo-produto/:id', component: DemoProdutoComponent}
 
 ];

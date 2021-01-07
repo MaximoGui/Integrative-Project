@@ -40,22 +40,6 @@ export class ProdutosComponent implements OnInit {
     this.findAllCategorias()
   }
 
-  publicar() {
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
-
-    if (this.produto.nome == null ||  this.produto.descricao == null || this.produto.categoria == null || this.categoria.nome == null) {
-      this.alert.showAlertInfo('Preencha todos os campos antes de publicar!')
-    } else {
-      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-        this.produto = resp;
-        this.produto = new Produto()
-        this.alert.showAlertSuccess('Produto cadastrado com sucesso!')
-        this.findAllProdutos()
-      })
-    }
-  }
-
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
