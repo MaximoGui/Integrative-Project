@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Usuario } from '../Model/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
+import { ViaCepService } from '../service/via-cep.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -17,6 +18,7 @@ export class CadastroComponent implements OnInit {
   constructor(
     public authService: AuthService,
     public router: Router,
+    private viaCep: ViaCepService,
     private alert: AlertasService
   ) { }
 
@@ -39,4 +41,17 @@ export class CadastroComponent implements OnInit {
     }
   }
 
+  consultaCep(valor: any, form: any){
+    this.viaCep.buscar(valor).subscribe((dados: any) => this.populaForm(dados,form));
+  }
+
+  populaForm(dados: any, form: any){
+    form.setValue({
+      cep: dados.cep,
+      logradouro: dados.logradouro,
+      bairro: dados.bairro,
+      cidade: dados.localidade,
+      uf: dados.uf
+    })
+  }
 }

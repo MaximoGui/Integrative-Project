@@ -25,6 +25,7 @@ import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
     AboutComponent,
     CarrinhoComponent,
     ProdutosComponent,
-    DemoProdutoComponent
+    DemoProdutoComponent,
+    PagamentoComponent
 
   ],
   imports: [
