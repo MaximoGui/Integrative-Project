@@ -9,7 +9,7 @@
       <div class="col-lg-6 col-md-6 col-sm-6 branco"></div>
       <div class="half col-lg-6 col-md-6 col-sm-6 branco">
         <h2 class="display-4 titulo-responsivo ">Um gole de inspiração</h2>
-        <p class="lead branco texto-responsivo ">As grandes ideias sempre surgem com uma caneca na mão</p>
+        <p class="lead branco texto-responsivo ">As grandes ideias surgem com uma caneca na mão!</p>
       </div>
     </div>
   </div>
@@ -31,17 +31,6 @@
           </form>
         </div>
       </nav>
-
-
-      <div class="form-group m-0">
-        <select name="categoria" id='categoria' class="form-control" [(ngModel)]='nomeCategoria'
-          (change)='findByNomeCategoria()'>
-          <option *ngFor='let item of listaCategorias' value={{item.nome}}>
-            {{item.nome}}
-          </option>
-        </select>
-        <button class="btn btn-outline-success ml-2" type="submit" (click)='findByNomeCategoria()'>Pesquisar </button>
-      </div>
       
     </div>
 

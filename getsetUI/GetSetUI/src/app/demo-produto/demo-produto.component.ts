@@ -42,7 +42,8 @@ export class DemoProdutoComponent implements OnInit {
       this.findByIdCategoria(this.categoriaId)
 
     
-      this.findProdutoByCategoria(this.categoriaId)
+      this.findAllCategorias()
+      this.findByNomeCategoria()
   }
 
   findByIdProduto(idProd: number) {
