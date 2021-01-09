@@ -13,7 +13,7 @@ import { ProdutosService } from '../service/produtos.service'
 export class CarrinhoComponent implements OnInit {
 
   produto: Produto = new Produto();
-  carrinho: Produto[];
+  carrinho: Produto[] = []
   prodId: number;
   index: number = 1
 
@@ -37,12 +37,6 @@ export class CarrinhoComponent implements OnInit {
 
   }
 
-  addCarrinho() {
-    this.carrinho[this.index] = new Produto()
-    this.carrinho[this.index].id = this.prodId
-    
-    console.log("Seus produtos " + this.carrinho[this.index].id)
-    this.index++
-  }
+ 
 
 }

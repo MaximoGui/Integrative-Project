@@ -1,8 +1,9 @@
+<!--POG-->
+<div class="row mt-5 mb-4"></div>
+<!--/POG-->
+
 <div class="container mt-5">
 
-    <!--POG-->
-    <div class="mt-5 mb-5"></div>
-    <!--/POG-->
     <div class="row mt-5 mb-5">
 
         <div class="col-md-12">
@@ -12,33 +13,22 @@
             <hr class="mt-4 mb-4">
 
             <div class="row">
-                <div class="col-md-12">
-
-                    <div class="card mt-5 mb-5">
-                        <div class="card-header">
-                            <div class="row d-flex align-items-center">
-                                <div class="col-md-8">
-                                    <h5 class="card-title"> {{produto.nome}} </h5>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-end">
-
-                                    <button class="btn btn-outline-danger ml-3"
-                                        [routerLink]="['/delete-produto', produto.id]">
-                                        Apagar
-                                    </button>
-
-                                </div>
-                            </div>
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="checkbox" aria-label="Chebox para permitir input text">
+                          </div>
                         </div>
-
-                        <div class="card-body">
-                            <p class="card-text" aria-describedby="texto">{{produto.descricao}} </p>
-                            <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                                Canecas GetSet
-                            </small>
-                        </div>
-                    </div>
+                        <input type="text" class="form-control" aria-label="Input text com checkbox">
+                      </div>
                 </div>
+
+                <div class="col-md-4">
+
+
+                </div>
+
             </div>
         </div>
     </div>
