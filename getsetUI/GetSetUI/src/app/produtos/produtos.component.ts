@@ -16,6 +16,7 @@ export class ProdutosComponent implements OnInit {
   key ='data';
   reverse = true;
   
+  pesquisa: boolean = true;
   categoria: Categoria = new Categoria();
   listaCategorias: Categoria[];
   idCategoria: number;
@@ -80,6 +81,14 @@ export class ProdutosComponent implements OnInit {
     } 
   }
 
+  ativaCategoria(){
+    this.pesquisa  = false;
+    console.log(this.pesquisa)
+  }
 
+  ativaProduto(){
+    this.pesquisa = true;
+    console.log(this.pesquisa)
+  }
 
 }
