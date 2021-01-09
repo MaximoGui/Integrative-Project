@@ -55,6 +55,14 @@ h1{
   font-weight: bold;
 }
 
+.getset {
+  margin: 10px 10px 20px 10px;
+}
+
+.display {
+  display: none;
+}
+
 h3{
   font-size: 24px;
   color: #333;
@@ -185,6 +193,12 @@ border: solid 1px #17a2b8;
   }
 }
 
+@media (max-width: 450px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767px){
   .container {
     max-width: 100%;
@@ -204,6 +218,15 @@ border: solid 1px #17a2b8;
   }
   .ajuste {
     padding: 0;
+  }
+  .display {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .getset-1 {
+    margin: 3vw;
   }
 }
 
