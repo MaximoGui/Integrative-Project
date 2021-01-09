@@ -1,6 +1,4 @@
-/*Cards novos*/
-
-*{
+.cardgs * {
   margin: auto;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
@@ -15,9 +13,29 @@
   margin-top: 0px;
 }
 
+.texto-resp {
+  width: 2vw;
+}
+
+div.img-titulo {
+  align-self: center;
+}
+
 .img-rs > img {
   height: auto;
   width: 100%;
+  max-height: 500px;
+}
+
+img.rounded-circle {
+  max-width: 180px;
+  max-height: 180px;
+  min-width: 160px;
+  min-height: auto;
+}
+
+.objetivo {
+  font-size: 10vw;
 }
 
 .objetivo:hover {
@@ -28,17 +46,32 @@ cardgs{
   font-family: averta_stdregular;
   font-size: 14px;
   font-weight: 400;
-  color: #000;
+  color: #777;
 }
+
 h1{
-  font-size: 36px;
-  counter-reset: #000;
+  font-size: 6vw;
+  counter-reset: #555;
   font-weight: bold;
 }
+
+.getset {
+  margin: 10px 10px 20px 10px;
+}
+
+.display {
+  display: none;
+}
+
 h3{
   font-size: 24px;
-  color: #000;
+  color: #333;
   font-weight: bold;
+}
+
+.card-body {
+  align-items: center;
+  height: 450px;
 }
 
 .card-body > p {
@@ -46,12 +79,12 @@ h3{
 }
 
 #team img{
-  margin-top: -50px;
+  margin-top: -70px;
 }
 
 #team i{
   font-size: 26px;
-  color: #000000;
+  color: #555;
 }
 #team p{
   font-weight: 500;
@@ -64,7 +97,6 @@ h3{
   transition: all 0.4s ease-in;
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
-  height: 450px;
 }
 
 #team .card:hover{
@@ -78,6 +110,7 @@ h3{
 #team .card:hover h3, #team .card:hover i{
   color: rgb(0, 0, 0);
 }
+
 .faGithub, .faInstagram, .faLinkedin {
   color: #000000;
 }
@@ -93,10 +126,10 @@ h3{
 .faLinkedin:hover {
   color: #0072b1;
 }
+
 ul.social-network {
   list-style: none;
   display: inline;
-
   padding: 0;
 }
 
@@ -113,16 +146,10 @@ ul.social-network li {
 }
 
 .gradiente-texto {
-    
   background-color: rgb(255, 104, 4);
-  
-  
   background-image: linear-gradient(45deg, #e66f00, #ff3c00);
-  
-  
   background-size: 100%;
   background-repeat: repeat;
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
@@ -132,4 +159,78 @@ ul.social-network li {
 
 .container-fluid{
   padding: 0px;
+}
+
+@media (min-width: 576px) {
+  .objetivo {
+    font-size: 4vw;
+  }
+  p.texto-resp {
+    width: 14px;
+    margin: 0;
+  }
+  .ajuste {
+    padding: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  div.row.bg-info {
+    margin-bottom: 30px;
+border: solid 1px #17a2b8;
+  }
+  div.missao1 {
+    order: 2;
+  }
+  div.missao2 {
+    order: 1;
+  }
+  div.valores1 {
+    order: 2;
+  }
+  div.valoes2 {
+    order: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+  .container {
+    max-width: 100%;
+  }
+  .missao2, .visao2, .valores2 {
+    padding: 0;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .objetivo {
+    font-size: 5vw;
+  }
+  .texto-resp {
+    width: 2vw;
+  }
+  .ajuste {
+    padding: 0;
+  }
+  .display {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .getset-1 {
+    margin: 3vw;
+  }
+}
+
+.now-wrap {
+  display: flex;
+  flex-wrap: nowrap;
 }
