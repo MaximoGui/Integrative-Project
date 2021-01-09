@@ -12,7 +12,10 @@ import { ProdutosService } from '../service/produtos.service'
 })
 export class CarrinhoComponent implements OnInit {
 
-  produto: Produto = new Produto()
+  produto: Produto = new Produto();
+  carrinho: Produto[];
+  prodId: number;
+  index: number = 1
 
   constructor(
     private produtosService: ProdutosService,
@@ -22,28 +25,24 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0, 0)
-    let id: number = this.route.snapshot.params['id'];
-    this.findByIdProduto(id);
+    window.scroll(0, 0),
+      this.prodId = this.route.snapshot.params["id"],
+      this.findByIdProduto(this.prodId)
   }
 
-  findByIdProduto(id: number) {
-    this.produtosService.getByIdProduto(id).subscribe((resp: Produto) => {
+  findByIdProduto(prodId: number) {
+    this.produtosService.getByIdProduto(prodId).subscribe((resp: Produto) => {
       this.produto = resp
     })
 
   }
 
-  btnSim(){
-    this.produtosService.putProduto(this.produto).subscribe(() =>{
-      this.router.navigate(['/home'])
-      this.alert.showAlertSuccess ('Parabéns pela sua compra e obrigado por nos ajudar!!!')
-    })
-  }
-
-  btnNao(){
-    this.router.navigate(['/home'])
-    this.alert.showAlertSuccess ('Continue olhando nossos produtos.')
+  addCarrinho() {
+    this.carrinho[this.index] = new Produto()
+    this.carrinho[this.index].id = this.prodId
+    
+    console.log("Seus produtos " + this.carrinho[this.index].id)
+    this.index++
   }
 
 }

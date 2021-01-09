@@ -2,8 +2,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 <!--/Importando a fonte-->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand img-fluid" href="#"> <img src="../../assets/imagens/getset logo com nome.png" class="mr-2  logo" height="30" alt=""></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0">
+  <a class="navbar-brand img-fluid" href="#"> <img src="../../assets/logoGetSet" class="mr-2 ml-4 mt-0 mt-0 p-0 logo" height="50" alt=""></a>
 
  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav d-flex mr-auto">
+    <ul class="navbar-nav mr-auto ml-2 mt-2">
       <li class="nav-item">
         <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink='/home'>Home <span
             class="sr-only">(current)</span></a>
@@ -35,17 +35,17 @@
 
     </ul>
 
-    <ul class="navbar-nav d-flex ">
+    <ul class="navbar-nav d-flex mt-2 mr-4 ml-3">
 
         <div *ngIf='auth.btnLogin()' class="p-2">
           <li class="nav-item d-flex">
-            <a class=" nav-link gradiente-texto" routerLink='/login'>Login</a>
+            <a class=" nav-link gradiente-texto text-uppercase font-weight-bold" routerLink='/login'>Login</a>
           </li>
         </div>
 
         <div *ngIf='auth.btnLogin()' class="p-2">
           <li class="nav-item">
-            <a class=" nav-link gradiente-texto" routerLink='/login' routerLink='/cadastro'>Cadastro</a>
+            <a class=" nav-link gradiente-texto text-uppercase font-weight-bold" routerLink='/login' routerLink='/cadastro'>Cadastro</a>
           </li>
         </div>
 
@@ -58,5 +58,3 @@
 
   </div>
 </nav>
-
-

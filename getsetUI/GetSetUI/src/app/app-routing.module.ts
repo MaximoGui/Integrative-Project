@@ -33,7 +33,10 @@ const routes: Routes = [
   {path:'about', component: AboutComponent},
   {path:'carrinho', component: CarrinhoComponent},
   {path:'demo-produto/:id', component: DemoProdutoComponent},
-  {path: 'pagamento', component: PagamentoComponent}
+  {path: 'pagamento', component: PagamentoComponent},
+  {path:'carrinho/:id', component: CarrinhoComponent},
+  {path:'demo-produto/:id', component: DemoProdutoComponent}
+
 
 ];
 

@@ -10,7 +10,7 @@ import { Usuario } from "../Model/Usuario";
 })
 export class AuthService {
 
-  
+
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
@@ -25,7 +25,7 @@ export class AuthService {
     let ok = false
     let token = environment.token
 
-    if (token != null) {
+    if (token != '') {
       ok = true
     }
 
@@ -36,7 +36,7 @@ export class AuthService {
     let ok = false
     let token = environment.token
 
-    if (token == null) {
+    if (token == '') {
       ok = true
     }
 

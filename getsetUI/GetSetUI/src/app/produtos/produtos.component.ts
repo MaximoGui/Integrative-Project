@@ -16,6 +16,7 @@ export class ProdutosComponent implements OnInit {
   key ='data';
   reverse = true;
   
+  pesquisa: boolean = true;
   categoria: Categoria = new Categoria();
   listaCategorias: Categoria[];
   idCategoria: number;
@@ -38,22 +39,6 @@ export class ProdutosComponent implements OnInit {
 
     this.findAllProdutos()
     this.findAllCategorias()
-  }
-
-  publicar() {
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
-
-    if (this.produto.nome == null ||  this.produto.descricao == null || this.produto.categoria == null || this.categoria.nome == null) {
-      this.alert.showAlertInfo('Preencha todos os campos antes de publicar!')
-    } else {
-      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-        this.produto = resp;
-        this.produto = new Produto()
-        this.alert.showAlertSuccess('Produto cadastrado com sucesso!')
-        this.findAllProdutos()
-      })
-    }
   }
 
   findAllProdutos() {
@@ -96,6 +81,14 @@ export class ProdutosComponent implements OnInit {
     } 
   }
 
+  ativaCategoria(){
+    this.pesquisa  = false;
+    console.log(this.pesquisa)
+  }
 
+  ativaProduto(){
+    this.pesquisa = true;
+    console.log(this.pesquisa)
+  }
 
 }
