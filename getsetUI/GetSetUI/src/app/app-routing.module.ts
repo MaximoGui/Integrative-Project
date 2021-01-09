@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
-import {LoginComponent } from './login/login.component';
-import {CadastroComponent} from './cadastro/cadastro.component'
-import {CategoriasComponent} from './categorias/categorias.component'
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent} from './cadastro/cadastro.component'
+import { CategoriasComponent} from './categorias/categorias.component'
 import { PostCategoriasComponent } from './post-categorias/post-categorias.component';
 import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
@@ -14,6 +14,7 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
 import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 
 const routes: Routes = [
@@ -30,8 +31,12 @@ const routes: Routes = [
   {path:'delete-produto/:id', component: DeleteProdutoComponent},
   {path:'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path:'about', component: AboutComponent},
+  {path:'carrinho', component: CarrinhoComponent},
+  {path:'demo-produto/:id', component: DemoProdutoComponent},
+  {path: 'pagamento', component: PagamentoComponent},
   {path:'carrinho/:id', component: CarrinhoComponent},
   {path:'demo-produto/:id', component: DemoProdutoComponent}
+
 
 ];
 
