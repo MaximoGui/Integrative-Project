@@ -16,8 +16,8 @@ p.card-text {
 }
 
 .imagens {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 400px;
 }
 
 .card{
@@ -38,7 +38,7 @@ p.card-text {
 
   .fundoJumbo {
     background: url("https://app.kiakiaprint.com/storage/gallery/custom-mugs-banner-kiakia-print_1599497757.jpg") ; 
-    -webkit-background-size: 100% 100%;
+    -webkit-background-size: 400px 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
@@ -86,5 +86,9 @@ p.card-text {
 
 .half {
     width: 50vw;
+}
+
+carousel {
+    z-index: 1;
 }
 

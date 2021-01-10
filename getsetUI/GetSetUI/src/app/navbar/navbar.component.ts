@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../Model/Usuario';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  usuario: Usuario = new Usuario()
 
   constructor(
     public auth: AuthService,
