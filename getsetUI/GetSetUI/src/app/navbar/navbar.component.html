@@ -36,6 +36,13 @@
     </ul>
 
     <ul class="navbar-nav d-flex mt-2 mr-4 ml-3">
+      
+
+      <div *ngIf='auth.btnSair()' class="p-2"> 
+        <li class="nav-item">
+          <a class="nav-link text-uppercase font-weight-bold gradiente-texto">Olá, Rubens</a>
+        </li>
+      </div>
 
       <li class="nav-item d-flex" class="p-2">
         <a class=" nav-link gradiente-texto text-uppercase font-weight-bold" routerLink='/carrinho'>Carrinho</a>

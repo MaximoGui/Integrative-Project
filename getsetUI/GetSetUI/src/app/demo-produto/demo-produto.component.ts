@@ -15,12 +15,15 @@ import { ProdutosService } from '../service/produtos.service';
 export class DemoProdutoComponent implements OnInit {
 
   produto: Produto = new Produto();
-  ListaProdutos: Produto[];
+  listaProdutos: Produto[];
   prodId: number;
+  nomeProduto: string;
 
   categoria: Categoria = new Categoria();
   listaCategorias: Categoria[];
-  categoriaId: number
+  categoriaId: number;
+  nomeCategoria: string;
+  listCat: Categoria [];
 
 
   constructor(
@@ -39,6 +42,9 @@ export class DemoProdutoComponent implements OnInit {
 
       this.categoriaId = this.route.snapshot.params["id"],
       this.findByIdCategoria(this.categoriaId)
+
+      this.findAllCategorias()
+
   }
 
   findByIdProduto(idProd: number) {
@@ -51,6 +57,29 @@ export class DemoProdutoComponent implements OnInit {
     this.categoriaService.getByIdCategoria(categoriaId).subscribe((resp: Categoria) => {
       this.categoria = resp;
     })
+  }
+
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+      console.log("lista de produtos "+JSON.stringify(this.listaProdutos))
+    })
+  }
+
+  findAllCategorias() {
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
+      this.listaCategorias = resp
+    })
+  }
+
+  findByNomeCategoria() {
+    if (this.nomeCategoria === '') {
+      this.findAllCategorias()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categoria[]) => {
+        this.listaCategorias = resp;
+      })
+    } 
   }
 
   btnComprar(idProd: number) {
