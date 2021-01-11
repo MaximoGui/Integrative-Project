@@ -29,7 +29,7 @@
                                 <div class="d-flex flex-column">
                                     <h5 class="card-title">{{produto.nome}}</h5>
                                 </div>
-                                <h3>{{produto.estoque}}</h3>
+                                <h3>Coloca aqui</h3>
                                 <h3 class="text-success">R$ {{produto.preco}}</h3>
                                 <div class="d-flex justify-content-end">
                                     <a href="#" class="btn btn-danger">Remover</a>
@@ -52,6 +52,12 @@
         </div>
     </div>
 </div>
+
+<div class="wrapper">
+    <button class="plusminus" (click)="handleMinus()">-</button>
+    <input type="number" class="num" value="0" [(ngModel)]="value" />
+    <button class="plusminus" (click)="handlePlus()">+</button>
+  </div>
 
 <hr class="hr3">
 

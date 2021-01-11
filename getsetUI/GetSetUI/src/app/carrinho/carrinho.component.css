@@ -15,3 +15,44 @@ img {
 .img-max{
     width: 80px;
 }
+
+input {
+    text-align: center;  
+    border: 1px solid #6C757D;
+  } 
+  
+  input[type="number"] {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+    }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  
+  .wrapper {
+    border: 2px #dcd3d3 solid;
+    width: 40vw;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    border-radius: 15px;
+  }
+  
+  .plusminus {
+    height: 100%;
+    width: 30%;
+    background: white;
+    border: none;
+    font-size: 40px;
+    color: #5f5fce;
+  }
+  
+  .num {
+    height: 100%;
+    width: 39%;
+    border: none;
+    font-size: 30px;
+  }
