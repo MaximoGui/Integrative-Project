@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  usuario: Usuario = new Usuario()
+  apelido = environment.apelido
 
   constructor(
     public auth: AuthService,

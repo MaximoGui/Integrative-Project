@@ -22,15 +22,22 @@
               </div>
               <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui"
                 [(ngModel)]='usuario.nome' name="first">
-            </div> <!-- form-group// -->
+            </div> 
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+              </div>
+              <input type="text" class="form-control" id="apelido" placeholder="Digite o seu apelido aqui"
+                [(ngModel)]='usuario.apelido' name="first">
+            </div> 
             <div class="form-group input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
               </div>
               <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
                 [(ngModel)]='usuario.email' name="first">
-            </div> <!-- form-group// -->
-            <!-- form-group// -->
+            </div> 
+            
 
             <!-- form-group end.// -->
             <div class="form-group input-group">

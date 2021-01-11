@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { ViaCepService } from '../service/via-cep.service';
 
 @Component({
@@ -7,6 +8,12 @@ import { ViaCepService } from '../service/via-cep.service';
   styleUrls: ['./perfil-cliente.component.css']
 })
 export class PerfilClienteComponent implements OnInit {
+
+  nome = environment.nome
+  email = environment.email
+  apelido = environment.apelido
+  dataNascimento = environment.dataNascimento
+  telefone = environment.telefone
 
   constructor(
     private viaCep: ViaCepService
