@@ -21,7 +21,6 @@ export class CarrinhoComponent implements OnInit {
     private produtosService: ProdutosService,
     private router: Router,
     private route: ActivatedRoute,
-    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -36,7 +35,5 @@ export class CarrinhoComponent implements OnInit {
     })
 
   }
-
- 
 
 }
