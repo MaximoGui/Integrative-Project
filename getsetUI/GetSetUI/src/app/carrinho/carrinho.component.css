@@ -6,3 +6,12 @@ p{
     letter-spacing: 1px;
     font-size: 16px;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.img-max{
+    width: 80px;
+}
