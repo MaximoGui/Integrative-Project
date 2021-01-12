@@ -22,43 +22,47 @@
               </div>
               <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui"
                 [(ngModel)]='usuario.nome' name="first">
-            </div> <!-- form-group// -->
+            </div> 
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+              </div>
+              <input type="text" class="form-control" id="apelido" placeholder="Digite o seu nome social aqui"
+                [(ngModel)]='usuario.apelido' name="first">
+            </div> 
             <div class="form-group input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
               </div>
               <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
                 [(ngModel)]='usuario.email' name="first">
-            </div> <!-- form-group// -->
-            <!-- form-group// -->
-
-            <!-- form-group end.// -->
+            </div> 
+            
             <div class="form-group input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
               </div>
               <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
                 (input)='conferirSenha($event)' value="{{senha}}" name="first">
-            </div> <!-- form-group// -->
+            </div> 
             <div class="form-group input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
               </div>
               <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de senha"
                 [(ngModel)]='usuario.senha' name="first">
-            </div> <!-- form-group// -->
+            </div> 
             <div class="form-group d-flex justify-content-center">
               <button type="submit" class="btn btn-outline-dark w-27 gradiente-botao" (click)='cadastrar()'>Cadastrar</button>
-            </div> <!-- form-group// -->
+            </div> 
             <p class="text-center">Já tem cadastro? <a routerLink='/login' class="gradiente-botao">Login</a> </p>
           </form>
         </article>
       </div>
     </div>
-  </div> <!-- card.// -->
+  </div> 
 
 </div>
-<!--container end.//-->
 
 <!--POG-->
 <div class="row mt-5 mb-5"></div>
@@ -72,28 +76,3 @@
   <a class="text-dark"></a>
 </div>
 <!-- Copyright -->
-<form #f="ngForm">
-  <div class="Form-group">
-
-    <label for="cep">Cep:</label><br>
-    <input type="text" class="Form-control" id="cep" name="cep" ngModel #cep="ngModel"
-      (blur)="consultaCep(cep.value, f)">
-
-    <label for="logradouro">Rua</label><br>
-    <input type="text" class="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel"
-      placeholder="..." disabled>
-
-    <label for="bairro">Bairro</label><br>
-    <input type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="..."
-      disabled>
-
-    <label for="cidade">Cidade</label><br>
-    <input type="text" class="Form-control" id="cidade" name="cidade" ngModel #cidade="ngModel" placeholder="..."
-      disabled>
-
-    <label for="uf">UF</label><br>
-    <input type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="..." disabled>
-
-  </div>
-
-</form>

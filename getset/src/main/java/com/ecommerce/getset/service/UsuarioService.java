@@ -38,8 +38,21 @@ public class UsuarioService {
 					String authHeader = "Basic " + new String(encodeAuth);
 					
 					user.get().setToken(authHeader);
+					user.get().setId(usuario.get().getId());
 					user.get().setNome(usuario.get().getNome());
+					user.get().setApelido(usuario.get().getApelido());
+					user.get().setDataNascimento(usuario.get().getDataNascimento());
+					user.get().setTelefone(usuario.get().getTelefone());
+					user.get().setCep(usuario.get().getCep());
+					user.get().setRua(usuario.get().getRua());
+					user.get().setNumero(usuario.get().getNumero());
+					user.get().setComplemento(usuario.get().getComplemento());
+					user.get().setBairro(usuario.get().getBairro());
+					user.get().setCidade(usuario.get().getCidade());
+					user.get().setUf(usuario.get().getUf());
+					user.get().setReferencia(usuario.get().getReferencia());
 					user.get().setAdmin(usuario.get().isAdmin());
+					
 					
 					return user;
 				}
