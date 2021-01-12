@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../Model/Categoria';
 import { Produto } from '../Model/Produto'
@@ -6,6 +6,7 @@ import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
+import { CarrinhoService } from './../service/carrinho.service';
 
 @Component({
   selector: 'app-demo-produto',
@@ -32,7 +33,8 @@ export class DemoProdutoComponent implements OnInit {
     private router: Router,
     private alert: AlertasService,
     private route: ActivatedRoute,
-    public auth: AuthService
+    public auth: AuthService,
+    public carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -82,24 +84,13 @@ export class DemoProdutoComponent implements OnInit {
     } 
   }
 
-  btnComprar(idProd: number) {
-    if(this.produto.estoque > 1){
-      this.produto.estoque--;
-      this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
-        this.produto = resp
-        this.router.navigate(['/produtos'])
-        this.alert.showAlertSuccess('Compra realizada!')
-      }, err => {
-        if (err.status =='500'){
-          this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
-        }
-      })
-    }else{
-      this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
-        this.router.navigate(['/home'])
-      })
-    }
-    
+  
+
+  btnCarrinho(){
+    this.carrinhoService.listaCarirnho[this.carrinhoService.indiceCarrinho] = this.prodId;
+    this.carrinhoService.indiceCarrinho++;
+    this.alert.showAlertSuccess('Produto adicionado ao carrinho!')
   }
+
 }
 

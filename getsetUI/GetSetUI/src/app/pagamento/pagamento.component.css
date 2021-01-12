@@ -1,5 +1,4 @@
 .jumbotron {
-    background-color: #999A9c;
     text-align: center;
 }
 
@@ -7,7 +6,6 @@
     margin-top: 10px;
     width: 100%;
     height: 100%;
-    box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
     border-radius: 18px;
     justify-content: center;
     margin-bottom: 50px;
@@ -31,7 +29,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 100%;
-    
+
 }
 
 
@@ -50,11 +48,29 @@ p{
     cursor: pointer;
     border-radius: 17px;
     transition: 0.3s;
-    
+
 }
 
 .container  button:hover{
     background-color: #fff;
     border-color:  #999A9c;
     color: black;
+}
+
+.gradiente-texto {
+    
+    background-color: rgb(255, 104, 4);
+    
+    
+    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    
+    
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: transform .2s;
 }

@@ -8,45 +8,48 @@
 
         <div class="col-md-12">
             <div>
-                <h1 class="d-flex justify-content-center">Meu carrinho</h1>
+                <h1 class="d-flex justify-content-center gradiente-texto">Meu carrinho</h1>
             </div>
             <hr class="mt-4 mb-4">
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card text-center">
-                        <div class="card-header d-flex">
-                            <h5 class="col-md-6 d-flex justify-content-start">Produto</h5>
-                            <h5 class="col-md-2 d-flex justify-content-start">quantidade</h5>
-                            <h5 class="col-md-2 d-flex justify-content-start">preço</h5>
-                            <h5 class="col-md-1"></h5>
-                          </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="img-max">
-                                    <img src="{{produto.imagem}}" alt="">
+                    <div *ngFor="let item of carrinho; index as i">
+                        <div class="card text-center">
+                            <div class="card-header d-flex">
+                                <h5 class="col-md-6 d-flex justify-content-start">Produto</h5>
+                                <h5 class="col-md-2 d-flex justify-content-start">quantidade</h5>
+                                <h5 class="col-md-2 d-flex justify-content-start">preço</h5>
+                                <h5 class="col-md-1"></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="img-max">
+                                        <img src="{{item.imagem}}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="card-title">{{item.nome}}</h5>
+                                    </div>
+                                    <h3>Qtd.1</h3>
+                                    <h3 class="text-success">R${{item.preco}}</h3>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="#" class="btn btn-danger">Remover</a>
+                                    </div>
                                 </div>
-                                <div class="d-flex flex-column">
-                                    <h5 class="card-title">{{produto.nome}}</h5>
-                                </div>
-                                <h3>Qtd.1</h3>
-                                <h3 class="text-success">R$ {{produto.preco}}</h3>
-                                <div class="d-flex justify-content-end">
-                                    <a href="#" class="btn btn-danger">Remover</a>
-                                  </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
 
-                      <div class="card mt-2">
-                          <div class="card-header d-flex">
-                            <h5 class="col-md-10 d-flex justify-content-start">Total</h5>
-                            <h5 class="col-md-2">R${{produto.preco}}</h5>
-                          </div>
-                      </div>
-                      <div class="d-flex justify-content-end">
+                    <div class="card mt-2">
+                        <div class="card-header d-flex">
+                            <h5 class="col-md-10 d-flex justify-content-start"><strong>Total</strong></h5>
+                            <h3 class="col-md-2 text-success" >R${{somatorioPrecos}}.99
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
                         <a href="#" class="btn btn-danger mt-2" routerLink='/pagamento'>Finalizar compra</a>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,7 +60,7 @@
 
 <!-- Copyright -->
 <div class="footer-copyright corcopy text-center py-3 cor">
-  <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
-  <a class="text-dark"></a>
+    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
+    <a class="text-dark"></a>
 </div>
 <!-- Copyright -->
