@@ -1,0 +1,47 @@
+<section id="contato">
+    <div class="imagem-fundo">
+    </div>
+    <div>
+        <h2 class="card-title mt-1 text-center gradiente-texto"></h2>
+        <p class="text-center">Meus dados</p>
+        <p class="divider-text">
+            <span class="bg-light"></span>
+        </p>
+        <form id="" action="" method="POST">
+            <input type="hidden" value="" name="fileContent" id="fileContent">
+            <input type="hidden" value="" name="filename" id="filename">
+            <input required="" type="text" name="nome" id="nome" placeholder="{{nome}}">
+            <input required="" type="email" name="email" id="email" placeholder="{{email}}">
+            <input required="" type="text" name="apelido" id="apelido" placeholder="{{apelido}}">
+            <input required="" type="text" name="dataNascimento" id="dataNascimento" placeholder="Data de nascimento">
+            <input required="" type="tel" value="" name="telefone" id="telefone" placeholder="telefone">
+            <input required="" type="file" name="attach" id="attach">
+        </form>
+        <h2 class="card-title mt-1 text-center gradiente-texto">Endereço</h2>
+        <p class="text-center">Dados</p>
+        <p class="divider-text">
+            <span class="bg-light"></span>
+        </p>
+        <form #f="ngForm">
+            <div class="Form-group">
+              <input type="text" class="Form-control" id="cep" name="cep" ngModel #cep="ngModel" placeholder="CEP" (blur)="consultaCep(cep.value, f)">
+              <input type="text" class="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel"
+                placeholder="Rua" disabled>
+              <input type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="Bairro"
+                disabled>
+              <input type="text" class="Form-control" id="cidade" name="cidade" ngModel #cidade="ngModel" placeholder="Cidade"
+                disabled>
+              <input type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="UF" disabled>
+            </div>
+          </form>
+        <button class="button" onclick="submitForm();">Enviar</button>
+    </div>
+  
+  </section>
+
+<!-- Copyright -->
+<div class="footer-copyright corcopy text-center py-3 cor">
+    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>
+    <a class="text-dark"></a>
+</div>
+<!-- Copyright -->

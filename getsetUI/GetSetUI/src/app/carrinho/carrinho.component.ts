@@ -1,6 +1,5 @@
 import { Component, OnInit, VERSION } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertasService } from '../service/alertas.service';
 import { Produto } from '../Model/Produto'
 import { ProdutosService } from '../service/produtos.service'
 import { CarrinhoService } from './../service/carrinho.service';
@@ -25,7 +24,6 @@ export class CarrinhoComponent implements OnInit {
 
   constructor(
     private produtosService: ProdutosService,
-    private router: Router,
     private route: ActivatedRoute,
     public carrinhoService: CarrinhoService,
     private viaCep: ViaCepService
@@ -106,5 +104,16 @@ export class CarrinhoComponent implements OnInit {
       uf: dados.uf
     })
   }
+
+  name = 'Angular ' + VERSION.major;
+  value = 0;
+
+  handleMinus() {
+    this.value--;  
+  }
+  handlePlus() {
+    this.value++;    
+  }
+  
 
 }

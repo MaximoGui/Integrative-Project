@@ -26,6 +26,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { DemoProdutoComponent } from './demo-produto/demo-produto.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     CarrinhoComponent,
     ProdutosComponent,
     DemoProdutoComponent,
-    PagamentoComponent
+    PagamentoComponent,
+    PerfilClienteComponent
 
   ],
   imports: [

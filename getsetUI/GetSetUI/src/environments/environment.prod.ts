@@ -1,5 +1,20 @@
 export const environment = {
   production: true,
   token: "",
-  admin: false,
+  id: 0,
+  nome: '',
+  email: '',
+  senha: '',
+  apelido: '',
+  dataNascimento: '',
+  telefone: '',
+  cep: 0,
+  rua: '',
+  numero: 0,
+  complemento: '',
+  bairro: '',
+  cidade: '',
+  uf: '',
+  referencia: '',
+  admin: false
 };

@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component'
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path:'demo-produto/:id', component: DemoProdutoComponent},
   {path: 'pagamento', component: PagamentoComponent},
   {path:'carrinho/:id', component: CarrinhoComponent},
-  {path:'demo-produto/:id', component: DemoProdutoComponent}
+  {path:'demo-produto/:id', component: DemoProdutoComponent},
+  {path:'perfil-cliente', component: PerfilClienteComponent}
 
 
 ];
