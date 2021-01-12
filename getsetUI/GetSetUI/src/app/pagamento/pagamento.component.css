@@ -1,5 +1,4 @@
 .jumbotron {
-    background-color: #999A9c;
     text-align: center;
 }
 
@@ -7,7 +6,6 @@
     margin-top: 10px;
     width: 100%;
     height: 100%;
-    box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
     border-radius: 18px;
     justify-content: center;
     margin-bottom: 50px;
@@ -31,7 +29,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 100%;
-    
+
 }
 
 
@@ -50,7 +48,7 @@ p{
     cursor: pointer;
     border-radius: 17px;
     transition: 0.3s;
-    
+
 }
 
 .container  button:hover{
