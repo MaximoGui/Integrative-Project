@@ -36,7 +36,7 @@
                             <h4 class="mt-3"><strong>R${{produto.preco}}</strong></h4>
                             <p class="text-primary mt-3"><strong>No estoque: {{produto.estoque}}</strong></p>
                         </div>
-                        <button type="button" class="btn btn-outline-dark mt-5 mb-2"><strong>Adicionar ao carrinho</strong></button>
+                        <button type="button" class="btn btn-outline-dark mt-5 mb-2" (click)="btnCarrinho()"><strong>Adicionar ao carrinho</strong></button>
                         <button type="button" class="btn btn-danger mt-3 mb-4" [routerLink]='["/carrinho", produto.id]'><strong>Comprar</strong></button>
                     </div>
                 </div>
