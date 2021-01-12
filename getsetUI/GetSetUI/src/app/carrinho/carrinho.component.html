@@ -56,33 +56,6 @@
     </div>
 </div>
 
-<section id="contato" class="w-50">
-    <div class="imagem-fundo">
-    </div>
-    <div>
-        <h2 class="card-title mt-1 text-center gradiente-texto">Endereço de Cobrança</h2>
-        <p class="text-center">Dados</p>
-        <p class="divider-text">
-            <span class="bg-light"></span>
-        </p>
-        <form #f="ngForm">
-            <div class="Form-group">
-              <input type="text" required class="Form-control" id="cep" name="cep" ngModel #cep="ngModel" placeholder="CEP" (blur)="consultaCep(cep.value, f)">
-              <input type="text" class="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel"
-                placeholder="Rua" disabled>
-              <input type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="Bairro"
-                disabled>
-              <input type="text" class="Form-control" id="cidade" name="cidade" ngModel #cidade="ngModel" placeholder="Cidade"
-                disabled>
-              <input type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="UF" disabled>
-            </div>
-          </form>
-            <form action="">
-                <input type="text" class="Form-control" id="numero" name="numero" ngModel #numero="ngModel" placeholder="Número">
-            </form>
-    </div>
-  </section>
-
 <hr class="hr3">
 
 <!-- Copyright -->

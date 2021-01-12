@@ -74,23 +74,6 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  handlePlus(indice: number) {
-    console.log("Aqui" + this.teste)
-    if(this.teste  === 0){
-      this.produtosService.getByIdProduto(indice).subscribe((resp: Produto) => {
-        this.produto = resp
-        this.somatorioPrecos = this.somatorioPrecos + resp.preco;
-      })
-      this.value++;
-    } 
-    this.teste++;
-    console.log("teste: "+ this.teste +" Tamanho: " + this.carrinhoService.listaCarirnho.length)
-    console.log("----------------------------")
-    if(this.teste  === this.carrinhoService.listaCarirnho.length){
-      this.teste = 0;
-    }
-  }
-
   consultaCep(valor: any, form: any){
     this.viaCep.buscar(valor).subscribe((dados: any) => this.populaForm(dados,form));
   }
@@ -103,16 +86,6 @@ export class CarrinhoComponent implements OnInit {
       cidade: dados.localidade,
       uf: dados.uf
     })
-  }
-
-  name = 'Angular ' + VERSION.major;
-  value = 0;
-
-  handleMinus() {
-    this.value--;  
-  }
-  handlePlus() {
-    this.value++;    
   }
   
 

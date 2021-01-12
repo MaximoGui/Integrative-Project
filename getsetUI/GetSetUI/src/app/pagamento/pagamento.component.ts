@@ -1,5 +1,9 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2'
+import { Produto } from '../Model/Produto';
+import { AlertasService } from '../service/alertas.service';
+import { ProdutosService } from '../service/produtos.service';
 
 declare var paypal: { Buttons: (arg0: { createOrder: (data: any, actions: any) => any; onApprove: (data: any, actions: any) => Promise<void>; onError: (err: any) => void; }) => { (): any; new(): any; render: { (arg0: any): void; new(): any; }; }; };
 
@@ -17,9 +21,16 @@ export class PagamentoComponent implements OnInit {
     description: 'Caneca',
   }
 
+  produto: Produto = new Produto()
+
   paidFor = false
 
-  constructor() { }
+  constructor(
+    private produtoService: ProdutosService,
+    private alert: AlertasService,
+    private router: Router
+
+  ) { }
 
   ngOnInit() {
 
@@ -57,6 +68,25 @@ export class PagamentoComponent implements OnInit {
       imageAlt: 'QR Code',
       footer: 'Esse QR Code foi enviado para seu email'
     })
+  }
+
+  btnComprar(idProd: number) {
+    if(this.produto.estoque > 1){
+      this.produto.estoque--;
+      this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
+        this.produto = resp
+        this.router.navigate(['/produtos'])
+        this.alert.showAlertSuccess('Compra realizada!')
+      }, err => {
+        if (err.status =='500'){
+          this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
+        }
+      })
+    }else{
+      this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
+        this.router.navigate(['/home'])
+      })
+    }
   }
 
 }

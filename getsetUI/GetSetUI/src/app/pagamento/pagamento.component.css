@@ -56,3 +56,21 @@ p{
     border-color:  #999A9c;
     color: black;
 }
+
+.gradiente-texto {
+    
+    background-color: rgb(255, 104, 4);
+    
+    
+    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    
+    
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: transform .2s;
+}
