@@ -407,6 +407,7 @@ export class NavbarComponent implements OnInit {
   sair() {
     this.router.navigate([&#x27;/login&#x27;])
     environment.token &#x3D; &#x27;&#x27;
+    environment.admin &#x3D; false
   }
 
 }
@@ -418,8 +419,8 @@ export class NavbarComponent implements OnInit {
 &lt;link href&#x3D;&quot;https://fonts.googleapis.com/css2?family&#x3D;Open+Sans:wght@300;400&amp;family&#x3D;Quicksand:wght@300&amp;display&#x3D;swap&quot; rel&#x3D;&quot;stylesheet&quot;&gt;
 &lt;!--/Importando a fonte--&gt;
 
-&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light fixed-top&quot;&gt;
-  &lt;a class&#x3D;&quot;navbar-brand img-fluid&quot; href&#x3D;&quot;#&quot;&gt; &lt;img src&#x3D;&quot;../../assets/imagens/getset logo com nome.png&quot; class&#x3D;&quot;mr-2  logo&quot; height&#x3D;&quot;30&quot; alt&#x3D;&quot;&quot;&gt;&lt;/a&gt;
+&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light fixed-top p-0&quot;&gt;
+  &lt;a class&#x3D;&quot;navbar-brand img-fluid&quot; href&#x3D;&quot;#&quot;&gt; &lt;img src&#x3D;&quot;../../assets/imagens/logoNovo.png&quot; class&#x3D;&quot;mr-2 ml-4 mt-0 mt-0 p-0 logo&quot; height&#x3D;&quot;38&quot; alt&#x3D;&quot;&quot;&gt;&lt;/a&gt;
 
  
   &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbarSupportedContent&quot; aria-controls&#x3D;&quot;navbarSupportedContent&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;
@@ -427,18 +428,18 @@ export class NavbarComponent implements OnInit {
   &lt;/button&gt;
 
   &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;navbarSupportedContent&quot;&gt;
-    &lt;ul class&#x3D;&quot;navbar-nav d-flex mr-auto&quot;&gt;
+    &lt;ul class&#x3D;&quot;navbar-nav mr-auto ml-2 mt-2&quot;&gt;
       &lt;li class&#x3D;&quot;nav-item&quot;&gt;
         &lt;a class&#x3D;&quot;nav-link text-uppercase font-weight-bold p-3 gradiente-texto&quot; routerLink&#x3D;&#x27;/home&#x27;&gt;Home &lt;span
             class&#x3D;&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
 
       &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-        &lt;a class&#x3D;&quot;nav-link text-uppercase font-weight-bold p-3 gradiente-texto&quot; routerLink&#x3D;&#x27;/produtos&#x27;&gt;Produtos&lt;/a&gt;
+        &lt;a class&#x3D;&quot;nav-link text-uppercase font-weight-bold p-3 gradiente-texto&quot; routerLink&#x3D;&#x27;/produtos&#x27;&gt;Loja&lt;/a&gt;
       &lt;/li&gt;
 
-      &lt;li class&#x3D;&quot;nav-item &quot;&gt;
-        &lt;a class&#x3D;&quot;nav-link text-uppercase font-weight-bold p-3 gradiente-texto&quot; routerLink&#x3D;&#x27;/categorias&#x27;&gt;Categorias&lt;/a&gt;
+      &lt;li class&#x3D;&quot;nav-item&quot; *ngIf&#x3D;&quot;auth.userAdmin()&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link text-uppercase font-weight-bold p-3 gradiente-texto&quot; routerLink&#x3D;&#x27;/categorias&#x27;&gt;Admin&lt;/a&gt;
       &lt;/li&gt;
 
       &lt;li class&#x3D;&quot;nav-item&quot;&gt;
@@ -451,17 +452,17 @@ export class NavbarComponent implements OnInit {
 
     &lt;/ul&gt;
 
-    &lt;ul class&#x3D;&quot;navbar-nav d-flex &quot;&gt;
+    &lt;ul class&#x3D;&quot;navbar-nav d-flex mt-2 mr-4 ml-3&quot;&gt;
 
         &lt;div *ngIf&#x3D;&#x27;auth.btnLogin()&#x27; class&#x3D;&quot;p-2&quot;&gt;
           &lt;li class&#x3D;&quot;nav-item d-flex&quot;&gt;
-            &lt;a class&#x3D;&quot; nav-link gradiente-texto&quot; routerLink&#x3D;&#x27;/login&#x27;&gt;Login&lt;/a&gt;
+            &lt;a class&#x3D;&quot; nav-link gradiente-texto text-uppercase font-weight-bold&quot; routerLink&#x3D;&#x27;/login&#x27;&gt;Login&lt;/a&gt;
           &lt;/li&gt;
         &lt;/div&gt;
 
         &lt;div *ngIf&#x3D;&#x27;auth.btnLogin()&#x27; class&#x3D;&quot;p-2&quot;&gt;
           &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-            &lt;a class&#x3D;&quot; nav-link gradiente-texto&quot; routerLink&#x3D;&#x27;/login&#x27; routerLink&#x3D;&#x27;/cadastro&#x27;&gt;Cadastro&lt;/a&gt;
+            &lt;a class&#x3D;&quot; nav-link gradiente-texto text-uppercase font-weight-bold&quot; routerLink&#x3D;&#x27;/login&#x27; routerLink&#x3D;&#x27;/cadastro&#x27;&gt;Cadastro&lt;/a&gt;
           &lt;/li&gt;
         &lt;/div&gt;
 
@@ -493,6 +494,11 @@ export class NavbarComponent implements OnInit {
     box-sizing: border-box;
 }
 
+p{
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
 .nav-link {
     color: #000000;
     
@@ -518,7 +524,8 @@ export class NavbarComponent implements OnInit {
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+
+
   }
 
   .gradiente-texto:hover {
@@ -526,7 +533,7 @@ export class NavbarComponent implements OnInit {
     background-color: rgb(255, 104, 4);
     
     
-    background-image: linear-gradient(45deg, #e66f00, #ff3c00);
+    background-image: linear-gradient(45deg, #eea300, #ff3c00);
     
     
     background-size: 100%;
@@ -569,8 +576,8 @@ export class NavbarComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--Importando a fonte--><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Quicksand:wght@300&display=swap" rel="stylesheet"><!--/Importando a fonte--><nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">  <a class="navbar-brand img-fluid" href="#"> <img src="../../assets/imagens/getset logo com nome.png" class="mr-2  logo" height="30" alt=""></a>   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">    <span class="navbar-toggler-icon"></span>  </button>  <div class="collapse navbar-collapse" id="navbarSupportedContent">    <ul class="navbar-nav d-flex mr-auto">      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/home\'>Home <span            class="sr-only">(current)</span></a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/produtos\'>Produtos</a>      </li>      <li class="nav-item ">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/categorias\'>Categorias</a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/about\'>Sobre nós</a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/contato\'>Contato</a>      </li>    </ul>    <ul class="navbar-nav d-flex ">        <div *ngIf=\'auth.btnLogin()\' class="p-2">          <li class="nav-item d-flex">            <a class=" nav-link gradiente-texto" routerLink=\'/login\'>Login</a>          </li>        </div>        <div *ngIf=\'auth.btnLogin()\' class="p-2">          <li class="nav-item">            <a class=" nav-link gradiente-texto" routerLink=\'/login\' routerLink=\'/cadastro\'>Cadastro</a>          </li>        </div>        <div *ngIf=\'auth.btnSair()\'>          <li class="nav-item">            <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" (click)=\'sair()\'>Sair</a>          </li>        </div>    </ul>  </div></nav></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
+        var COMPONENT_TEMPLATE = '<div><!--Importando a fonte--><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Quicksand:wght@300&display=swap" rel="stylesheet"><!--/Importando a fonte--><nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0">  <a class="navbar-brand img-fluid" href="#"> <img src="../../assets/imagens/logoNovo.png" class="mr-2 ml-4 mt-0 mt-0 p-0 logo" height="38" alt=""></a>   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">    <span class="navbar-toggler-icon"></span>  </button>  <div class="collapse navbar-collapse" id="navbarSupportedContent">    <ul class="navbar-nav mr-auto ml-2 mt-2">      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/home\'>Home <span            class="sr-only">(current)</span></a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/produtos\'>Loja</a>      </li>      <li class="nav-item" *ngIf="auth.userAdmin()">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/categorias\'>Admin</a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/about\'>Sobre nós</a>      </li>      <li class="nav-item">        <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" routerLink=\'/contato\'>Contato</a>      </li>    </ul>    <ul class="navbar-nav d-flex mt-2 mr-4 ml-3">        <div *ngIf=\'auth.btnLogin()\' class="p-2">          <li class="nav-item d-flex">            <a class=" nav-link gradiente-texto text-uppercase font-weight-bold" routerLink=\'/login\'>Login</a>          </li>        </div>        <div *ngIf=\'auth.btnLogin()\' class="p-2">          <li class="nav-item">            <a class=" nav-link gradiente-texto text-uppercase font-weight-bold" routerLink=\'/login\' routerLink=\'/cadastro\'>Cadastro</a>          </li>        </div>        <div *ngIf=\'auth.btnSair()\'>          <li class="nav-item">            <a class="nav-link text-uppercase font-weight-bold p-3 gradiente-texto" (click)=\'sair()\'>Sair</a>          </li>        </div>    </ul>  </div></nav></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'DemoProdutoComponent', 'selector': 'app-demo-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
 </script>

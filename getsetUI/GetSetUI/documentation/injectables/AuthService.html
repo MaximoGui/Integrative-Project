@@ -446,7 +446,7 @@ export class AuthService {
     let ok &#x3D; false
     let token &#x3D; environment.token
 
-    if (token !&#x3D; null) {
+    if (token !&#x3D; &#x27;&#x27;) {
       ok &#x3D; true
     }
 
@@ -457,7 +457,7 @@ export class AuthService {
     let ok &#x3D; false
     let token &#x3D; environment.token
 
-    if (token &#x3D;&#x3D; null) {
+    if (token &#x3D;&#x3D; &#x27;&#x27;) {
       ok &#x3D; true
     }
 
@@ -468,15 +468,15 @@ export class AuthService {
     let ok &#x3D; false
     let admin &#x3D; environment.admin
 
-    if(admin &#x3D;&#x3D; true) {
+    if (admin &#x3D;&#x3D; true) {
       ok &#x3D; true
-    }else {
-      ok &#x3D; false
     }
     return ok
   }
-}
 
+
+
+}
 </code></pre>
     </div>
 

@@ -174,12 +174,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(produtosService: <a href="../injectables/ProdutosService.html">ProdutosService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, alert: <a href="../injectables/AlertasService.html">AlertasService</a>)</code>
+<code>constructor(produtosService: <a href="../injectables/ProdutosService.html">ProdutosService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, alert: <a href="../injectables/AlertasService.html">AlertasService</a>, _btnVerdeService: <a href="../injectables/CarrinhoService.html">CarrinhoService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/carrinho/carrinho.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/carrinho/carrinho.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -244,6 +244,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>_btnVerdeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CarrinhoService.html" target="_self" >CarrinhoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -284,8 +296,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -323,8 +335,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:39</a></div>
                 </td>
             </tr>
 
@@ -362,8 +374,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:32</a></div>
                 </td>
             </tr>
 
@@ -432,8 +444,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/carrinho/carrinho.component.ts:26</a></div>
                 </td>
             </tr>
 
@@ -480,7 +492,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/carrinho/carrinho.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/carrinho/carrinho.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -493,7 +505,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CarrinhoService } from &#x27;./../service/carrinho.service&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 import { AlertasService } from &#x27;../service/alertas.service&#x27;;
 import { Produto } from &#x27;../Model/Produto&#x27;
@@ -513,7 +526,8 @@ export class CarrinhoComponent implements OnInit {
     private produtosService: ProdutosService,
     private router: Router,
     private route: ActivatedRoute,
-    private alert: AlertasService
+    private alert: AlertasService,
+    private _btnVerdeService: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -574,7 +588,14 @@ export class CarrinhoComponent implements OnInit {
                 <p class="comment">
                     <code>./carrinho.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">*{
+    font-family: &#x27;Quicksand&#x27;, sans-serif;
+}
+
+p{
+    letter-spacing: 1px;
+    font-size: 16px;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -603,7 +624,7 @@ export class CarrinhoComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="container mt-5">    <div class="row mt-5 mb-5">              <div class="col-md-12">            <div class="d-flex justify-content-center mt-5">                <h1>No momento não estamos realizando transações</h1>            </div>            <hr class="mt-4 mb-4">            <h5 class="text-center">Continue dando uma olhada em nossos produtos</h5>            <div class="d-flex justify-content-center mt-5">                <button class="btn btn-outline-dark mr-3" routerLink=\'/produtos\'>Produtos</button>                <button class="btn btn-outline-danger" routerLink=\'/home\'>Home</button>            </div>        </div>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'DemoProdutoComponent', 'selector': 'app-demo-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CarrinhoComponent'};
 </script>
