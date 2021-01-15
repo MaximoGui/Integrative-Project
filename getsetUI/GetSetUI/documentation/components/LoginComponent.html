@@ -378,24 +378,22 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
-    environment.admin &#x3D; this.userLogin.admin
-    if (this.userLogin.email &#x3D;&#x3D;&#x3D; &#x27;admin@getset.com&#x27;) {
-      this.userLogin.admin &#x3D; true
-      console.log(this.userLogin.admin)
-      this.authService.logar(this.userLogin).subscribe((resp: any &#x3D; UserLogin) &#x3D;&gt; {
-        this.userLogin &#x3D; resp
+    this.authService.logar(this.userLogin).subscribe((resp: any &#x3D; UserLogin) &#x3D;&gt; {
+      this.userLogin &#x3D; resp
+      environment.admin &#x3D; this.userLogin.admin
+
+      if (this.userLogin.email &#x3D;&#x3D; &#x27;admin@getset.com&#x27;) {
+        environment.admin &#x3D; true
+        console.log(environment.admin)
         environment.token &#x3D; this.userLogin.token
         this.router.navigate([&#x27;/home&#x27;])
-      })
-    } else {
-      this.userLogin.admin &#x3D; false
-      console.log(this.userLogin.admin)
-      this.authService.logar(this.userLogin).subscribe((resp:any &#x3D; UserLogin) &#x3D;&gt; {
-        this.userLogin &#x3D; resp
-        localStorage.setItem(&#x27;token&#x27;, this.userLogin.token)
+
+      } else {
+        environment.admin &#x3D; false
+        environment.token &#x3D; this.userLogin.token
         this.router.navigate([&#x27;/home&#x27;])
-      })
-    }
+      }
+    }) 
   }
 }</code></pre>
     </div>
@@ -487,6 +485,12 @@ export class LoginComponent implements OnInit {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+p{
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
 .divider-text span {
     padding: 7px;
     font-size: 12px;
@@ -604,7 +608,7 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet"><!--POG--><div class="row mt-5 mb-5"></div><!--/POG--><div class="container w-100 d-flex justify-content-center">  <div class="card bg-light col-md-12 col-lg-9 col-sm-12 w-100 d-flex justify-content-center">    <div class="row w-100 d-flex justify-content-center">      <div class="col-md-5 col-lg-4 col-sm-12 d-flex justify-content-center imagem-fundo w-100">      </div>      <div class="col-md-7 col-lg-8 col-sm-12 d-flex justify-content-center">        <article class="card-body" style="max-width: 600px;">          <h2 class="card-title mt-1 text-center gradiente-texto">Login</h2>          <p class="text-center"></p>          <p class="divider-text">            <span class="bg-light">Insira</span>          </p>          <form>           <!-- form-group// -->            <div class="form-group input-group">              <div class="input-group-prepend">                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>              </div>              <div class="row w-100">                <div class="col-12">                  <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"                [(ngModel)]=\'userLogin.email\' name="first">                </div>              </div>              <div class="row">                <div class="col-12">                <small id="emailHelp" class="form-text text-muted d-flex justify-content-center">Seu e-mail estará seguro!</small>              </div>              </div>                            </div> <!-- form-group// -->                                 <!-- form-group// -->            <!-- form-group end.// -->            <div class="form-group input-group">              <div class="input-group-prepend">                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>              </div>              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]=\'userLogin.senha\' name="first">            </div> <!-- form-group// -->            <div class="form-group d-flex justify-content-center">              <button type="submit" class="btn btn-outline-dark w-27 gradiente-botao" (click)=\'entrar()\'>Entrar</button>            </div> <!-- form-group// -->            <p class="text-center">Não tem cadastro? <a routerLink=\'/cadastro\' class="gradiente-botao">Cadastrar</a> </p>          </form>        </article>      </div>    </div>  </div> <!-- card.// --></div><!--POG--><div class="row mt-5 mb-5"></div><!--/POG--><hr><!-- Copyright --><div class="footer-copyright corcopy text-center py-3 cor">  <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>  <a class="text-dark"></a></div><!-- Copyright --></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'DemoProdutoComponent', 'selector': 'app-demo-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

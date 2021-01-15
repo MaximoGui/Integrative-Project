@@ -723,7 +723,7 @@ export class PutProdutoComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) &#x3D;&gt; {
       this.produto &#x3D; resp
-      this.router.navigate([&#x27;/categorias&#x27;])
+      this.router.navigate([&#x27;/produtos&#x27;])
       this.alert.showAlertSuccess(&#x27;Produto atualizado com sucesso!&#x27;)
     }, err &#x3D;&gt; {
       if (err.status &#x3D;&#x3D;&#x27;500&#x27;){
@@ -760,13 +760,31 @@ export class PutProdutoComponent implements OnInit {
                 &lt;div class&#x3D;&quot;form-group&quot;&gt;
                     &lt;label for&#x3D;&quot;nome&quot;&gt;Nome do produto&lt;/label&gt;
                     &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;nome&quot; aria-describedby&#x3D;&quot;emailHelp&quot;
-                        placeholder&#x3D;&quot;Digite aqui o nome&quot; [(ngModel)]&#x3D;&quot;produto.nome&quot;&gt;
+                        placeholder&#x3D;&quot;Digite aqui o nome do produto&quot; [(ngModel)]&#x3D;&quot;produto.nome&quot;&gt;
                 &lt;/div&gt;
 
                 &lt;div class&#x3D;&quot;form-group&quot;&gt;
-                    &lt;label for&#x3D;&quot;tecnologia&quot;&gt;Tecnologia do produto&lt;/label&gt;
-                    &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;tecnologia&quot; rows&#x3D;&quot;3&quot; placeholder&#x3D;&quot;Digite aqui a tecnologia&quot;
-                        [(ngModel)]&#x3D;&quot;produto.tecnologia&quot;&gt;&lt;/textarea&gt;
+                    &lt;label for&#x3D;&quot;descricao&quot;&gt;Descricao do produto&lt;/label&gt;
+                    &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;descricao&quot; rows&#x3D;&quot;3&quot; placeholder&#x3D;&quot;Digite aqui a descricao&quot;
+                        [(ngModel)]&#x3D;&quot;produto.descricao&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label class&#x3D;&quot;text-monospace&quot; for&#x3D;&quot;imagem&quot;&gt;Imagem:&lt;/label&gt;
+                    &lt;textarea type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;imagem&quot; placeholder&#x3D;&quot;Coloque aqui a url da imagem&quot;
+                        [(ngModel)]&#x3D;&#x27;produto.imagem&#x27;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label class&#x3D;&quot;text-monospace&quot; for&#x3D;&quot;preco&quot;&gt;Preço:&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;preco&quot; placeholder&#x3D;&quot;Digite aqui o preco do produto&quot;
+                        [(ngModel)]&#x3D;&#x27;produto.preco&#x27;&gt;
+                &lt;/div&gt;
+    
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label class&#x3D;&quot;text-monospace&quot; for&#x3D;&quot;estoque&quot;&gt;Estoque:&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;estoque&quot; placeholder&#x3D;&quot;Digite aqui a quantidade no estoque&quot;
+                        [(ngModel)]&#x3D;&#x27;produto.estoque&#x27;&gt;
                 &lt;/div&gt;
 
                 &lt;div class&#x3D;&quot;form-group m-0&quot;&gt;
@@ -782,7 +800,7 @@ export class PutProdutoComponent implements OnInit {
                 &lt;/div&gt;
 
                 &lt;div class&#x3D;&quot;d-flex justify-content-end mt-3&quot;&gt;
-                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-info w-25&quot; (click)&#x3D;&quot;salvar()&quot;&gt;Salvar&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-info w-25&quot; (click)&#x3D;&quot;salvar()&quot; &gt;Salvar&lt;/button&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -831,8 +849,8 @@ export class PutProdutoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <!--POG-->    <div class="row mt-5 mb-5"></div>    <!--/POG-->    <div class="row mt-5 mb-5">        <div class="col-md-12">            <div>                <div class="form-group">                    <label for="nome">Nome do produto</label>                    <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"                        placeholder="Digite aqui o nome" [(ngModel)]="produto.nome">                </div>                <div class="form-group">                    <label for="tecnologia">Tecnologia do produto</label>                    <textarea class="form-control" id="tecnologia" rows="3" placeholder="Digite aqui a tecnologia"                        [(ngModel)]="produto.tecnologia"></textarea>                </div>                <div class="form-group m-0">                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a                            routerLink="/cadastro-categoria">Cadastre                            um novo</a></label>                    <select name="categoria" id=\'categoria\' [(ngModel)]="idCategoria" (change)="findByIdCategoria()"                        class="form-control">                        <option *ngFor="let item of listaCategorias" value={{item.id}}>                            {{item.nome}}                        </option>                    </select>                </div>                <div class="d-flex justify-content-end mt-3">                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>                </div>            </div>        </div>    </div></div><hr><!-- Copyright --><div class="footer-copyright corcopy text-center py-3 cor">    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>    <a class="text-dark"></a></div><!-- Copyright --></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <!--POG-->    <div class="row mt-5 mb-5"></div>    <!--/POG-->    <div class="row mt-5 mb-5">        <div class="col-md-12">            <div>                <div class="form-group">                    <label for="nome">Nome do produto</label>                    <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"                        placeholder="Digite aqui o nome do produto" [(ngModel)]="produto.nome">                </div>                <div class="form-group">                    <label for="descricao">Descricao do produto</label>                    <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descricao"                        [(ngModel)]="produto.descricao"></textarea>                </div>                <div class="form-group">                    <label class="text-monospace" for="imagem">Imagem:</label>                    <textarea type="text" class="form-control" id="imagem" placeholder="Coloque aqui a url da imagem"                        [(ngModel)]=\'produto.imagem\'></textarea>                </div>                <div class="form-group">                    <label class="text-monospace" for="preco">Preço:</label>                    <input type="text" class="form-control" id="preco" placeholder="Digite aqui o preco do produto"                        [(ngModel)]=\'produto.preco\'>                </div>                    <div class="form-group">                    <label class="text-monospace" for="estoque">Estoque:</label>                    <input type="text" class="form-control" id="estoque" placeholder="Digite aqui a quantidade no estoque"                        [(ngModel)]=\'produto.estoque\'>                </div>                <div class="form-group m-0">                    <label class="text-monospace" for="categoria">Escolha uma categoria ou <a                            routerLink="/cadastro-categoria">Cadastre                            um novo</a></label>                    <select name="categoria" id=\'categoria\' [(ngModel)]="idCategoria" (change)="findByIdCategoria()"                        class="form-control">                        <option *ngFor="let item of listaCategorias" value={{item.id}}>                            {{item.nome}}                        </option>                    </select>                </div>                <div class="d-flex justify-content-end mt-3">                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()" >Salvar</button>                </div>            </div>        </div>    </div></div><hr><!-- Copyright --><div class="footer-copyright corcopy text-center py-3 cor">    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>    <a class="text-dark"></a></div><!-- Copyright --></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'DemoProdutoComponent', 'selector': 'app-demo-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PutProdutoComponent'};
 </script>

@@ -883,7 +883,7 @@ export class ProdutosComponent implements OnInit {
     this.categoria.id &#x3D; this.idCategoria
     this.produto.categoria &#x3D; this.categoria
 
-    if (this.produto.nome &#x3D;&#x3D; null ||  this.produto.tecnologia &#x3D;&#x3D; null || this.produto.categoria &#x3D;&#x3D; null || this.categoria.nome &#x3D;&#x3D; null) {
+    if (this.produto.nome &#x3D;&#x3D; null ||  this.produto.descricao &#x3D;&#x3D; null || this.produto.categoria &#x3D;&#x3D; null || this.categoria.nome &#x3D;&#x3D; null) {
       this.alert.showAlertInfo(&#x27;Preencha todos os campos antes de publicar!&#x27;)
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) &#x3D;&gt; {
@@ -935,6 +935,8 @@ export class ProdutosComponent implements OnInit {
     } 
   }
 
+
+
 }
 </code></pre>
     </div>
@@ -951,7 +953,7 @@ export class ProdutosComponent implements OnInit {
       &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-6 branco&quot;&gt;&lt;/div&gt;
       &lt;div class&#x3D;&quot;half col-lg-6 col-md-6 col-sm-6 branco&quot;&gt;
         &lt;h2 class&#x3D;&quot;display-4 titulo-responsivo &quot;&gt;Um gole de inspiração&lt;/h2&gt;
-        &lt;p class&#x3D;&quot;lead branco texto-responsivo &quot;&gt;As grandes ideias sempre surgem com uma caneca na mão&lt;/p&gt;
+        &lt;p class&#x3D;&quot;lead branco texto-responsivo &quot;&gt;As grandes ideias surgem com uma caneca na mão!&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -962,43 +964,96 @@ export class ProdutosComponent implements OnInit {
 
   &lt;div class&#x3D;&quot;row&quot;&gt;
 
-    &lt;div class&#x3D;&quot;col-lg-3 col-md-12 col-sm 12&quot;&gt;
-
-      &lt;nav class&#x3D;&quot;navbar navbar-light d-flex justify-content-center mt-4 mb-4 w-100 p-0&quot;&gt;
-        &lt;div class&#x3D;&quot;container-fluid d-flex justify-content-center w-100&quot;&gt;
-          &lt;form class&#x3D;&quot;d-flex justify-content-center w-100&quot;&gt;
-            &lt;input class&#x3D;&quot;form-control w-100&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Produtos...&quot; aria-label&#x3D;&quot;Pesquisar&quot;
-              [(ngModel)]&#x3D;&#x27;nomeProduto&#x27; name&#x3D;&quot;first&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-outline-success ml-2&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&#x27;findByNomeProduto()&#x27;&gt;Pesquisar &lt;/button&gt;
-          &lt;/form&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;nav class&#x3D;&quot;d-flex justify-content-center mt-2&quot;&gt;
+        &lt;div class&#x3D;&quot;nav nav-tabs&quot; id&#x3D;&quot;nav-tab&quot; role&#x3D;&quot;tablist&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-item nav-link active text-secondary font-weight-bold&quot; id&#x3D;&quot;nav-home-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+            href&#x3D;&quot;#Canecas&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-home&quot; aria-selected&#x3D;&quot;true&quot;
+            (click)&#x3D;&quot;ativaProduto()&quot;&gt;Canecas&lt;/a&gt;
+          &lt;a class&#x3D;&quot;nav-item nav-link text-secondary font-weight-bold&quot; id&#x3D;&quot;nav-profile-tab&quot; data-toggle&#x3D;&quot;tab&quot;
+            href&#x3D;&quot;#Categorias&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-profile&quot; aria-selected&#x3D;&quot;false&quot; (click)&#x3D;&quot;ativaCategoria()&quot;&gt;
+            Categorias &lt;/a&gt;
         &lt;/div&gt;
       &lt;/nav&gt;
+      &lt;div class&#x3D;&quot;tab-content &quot; id&#x3D;&quot;nav-tabContent&quot;&gt;
 
+        &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;Canecas&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-postagens-tab&quot;&gt;
+          &lt;div class&#x3D;&quot;row  mt-3 ml-0  mr-0&quot;&gt;
+            &lt;div class&#x3D;&quot; col-12 col-md-10 p-0 m-0&quot;&gt;
+              &lt;input class&#x3D;&quot;form-control w-100&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Pesquisar caneca&quot; aria-label&#x3D;&quot;Pesquisar&quot;
+                [(ngModel)]&#x3D;&quot;nomeProduto&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot; col-12 col-md-2 p-0 m-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-outline-primary w-100 ml-3&quot; type&#x3D;&quot;button&quot;
+                (click)&#x3D;&quot;findByNomeProduto()&quot;&gt;Pesquisar&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;Categorias&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-presenca-tab&quot;&gt;
+          &lt;div class&#x3D;&quot;row mt-3 mb-2  ml-0  mr-0&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-10 p-0 m-0&quot;&gt;
+              &lt;input class&#x3D;&quot;form-control w-100&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Pesquisar Categoria&quot; aria-label&#x3D;&quot;Pesquisar&quot;
+                [(ngModel)]&#x3D;&quot;nomeCategoria&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-2 p-0 m-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-outline-primary w-100&quot; type&#x3D;&quot;button&quot;
+                (click)&#x3D;&quot;findByNomeCategoria()&quot;&gt;Pesquisar&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+
+      &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class&#x3D;&quot;col-lg-9 col-md-12 col-sm-12 d-flex justify-content-center&quot;&gt;
+    &lt;div *ngIf&#x3D;&#x27;!!pesquisa&#x27;&gt;
       &lt;div class&#x3D;&quot;row w-100 d-flex justify-content-center&quot;&gt;
-        &lt;div class&#x3D;&quot;mt-3 col-lg-4 col-md-6 col-sm-12  d-flex justify-content-center&quot;
+        &lt;div class&#x3D;&quot;mt-3 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center&quot;
           *ngFor&#x3D;&quot;let item of listaProdutos | orderBy : key reverse&quot;&gt;
-          &lt;div class&#x3D;&quot;card mr-4 ml-4 p-2&quot; style&#x3D;&quot;width: 16rem;&quot;&gt;
-            &lt;img class&#x3D;&quot;card-img-top cursor&quot;
-              src&#x3D;&quot;https://image.freepik.com/psd-gratuitas/canecas-brancas-com-maquete-de-cor-editavel_149660-64.jpg&quot;
-              alt&#x3D;&quot;Imagem de capa do card&quot;&gt;
+          &lt;div class&#x3D;&quot;card mt-5 p-2&quot; style&#x3D;&quot;width: 16rem;&quot;&gt;
+            &lt;img class&#x3D;&quot;card-img-top cursor cardImg&quot; src&#x3D;&quot;{{item.imagem}}&quot; alt&#x3D;&quot;Imagem de capa do card&quot;&gt;
             &lt;div class&#x3D;&quot;card-body&quot;&gt;
               &lt;h4 class&#x3D;&quot;card-title&quot;&gt;{{item.nome}}&lt;/h4&gt;
-
               &lt;div class&#x3D;&quot;buy d-flex justify-content-between align-items-center&quot;&gt;
                 &lt;div class&#x3D;&quot;price text-success&quot;&gt;
                   &lt;h5 class&#x3D;&quot;mt-4&quot;&gt;R${{item.preco}}&lt;/h5&gt;
                 &lt;/div&gt;
-                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; routerLink&#x3D;&#x27;/carrinho&#x27;&gt;Comprar&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; [routerLink]&#x3D;&#x27;[&quot;/demo-produto&quot;, item.id]&#x27;&gt;Comprar&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div *ngIf&#x3D;&#x27;!pesquisa&#x27;&gt;
+      
+      &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;row w-100 d-flex justify-content-center&quot;&gt;
+          &lt;div class&#x3D;&quot;mt-3 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center&quot;
+            *ngFor&#x3D;&quot;let item of listaCategorias; index as i&quot;&gt;
+            &lt;div class&#x3D;&quot;card mt-5 p-2&quot; *ngFor&#x3D;&#x27;let x of item.produto&#x27;&gt;
+              &lt;img class&#x3D;&quot;card-img-top cursor cardImg&quot; src&#x3D;&quot;{{x.imagem}}&quot; alt&#x3D;&quot;Imagem de capa do card&quot;&gt;
+              &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                &lt;h4 class&#x3D;&quot;card-title&quot;&gt;{{x.nome}}&lt;/h4&gt;
+                &lt;div class&#x3D;&quot;buy d-flex justify-content-between align-items-center&quot;&gt;
+                  &lt;div class&#x3D;&quot;price text-success&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;mt-4&quot;&gt;R${{x.preco}}&lt;/h5&gt;
+                  &lt;/div&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; [routerLink]&#x3D;&#x27;[&quot;/demo-produto&quot;, x.id]&#x27;&gt;Comprar&lt;/button&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 
       &lt;/div&gt;
+      
     &lt;/div&gt;
+
+
   &lt;/div&gt;
 
   &lt;hr class&#x3D;&quot;hr3&quot;&gt;
@@ -1015,7 +1070,16 @@ export class ProdutosComponent implements OnInit {
                 <p class="comment">
                     <code>./produtos.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">p.card-text {
+                <pre class="line-numbers"><code class="language-scss">*{
+    font-family: &#x27;Quicksand&#x27;, sans-serif;
+}
+
+p{
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+p.card-text {
     max-width: 40ch;
     max-height: 40ch;
     overflow: hidden;
@@ -1124,8 +1188,8 @@ export class ProdutosComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--POG--><div class="row mt-4 mb-4"></div><!--/POG--><!--Banner--><div class="jumbotron jumbotron-fluid fundoJumbo">  <div class="container">    <div class="row d-flex justify-content-end">      <div class="col-lg-6 col-md-6 col-sm-6 branco"></div>      <div class="half col-lg-6 col-md-6 col-sm-6 branco">        <h2 class="display-4 titulo-responsivo ">Um gole de inspiração</h2>        <p class="lead branco texto-responsivo ">As grandes ideias sempre surgem com uma caneca na mão</p>      </div>    </div>  </div></div><!--/Banner--><div class="container-fluid">  <div class="row">    <div class="col-lg-3 col-md-12 col-sm 12">      <nav class="navbar navbar-light d-flex justify-content-center mt-4 mb-4 w-100 p-0">        <div class="container-fluid d-flex justify-content-center w-100">          <form class="d-flex justify-content-center w-100">            <input class="form-control w-100" type="search" placeholder="Produtos..." aria-label="Pesquisar"              [(ngModel)]=\'nomeProduto\' name="first">            <button class="btn btn-outline-success ml-2" type="submit" (click)=\'findByNomeProduto()\'>Pesquisar </button>          </form>        </div>      </nav>    </div>    <div class="col-lg-9 col-md-12 col-sm-12 d-flex justify-content-center">      <div class="row w-100 d-flex justify-content-center">        <div class="mt-3 col-lg-4 col-md-6 col-sm-12  d-flex justify-content-center"          *ngFor="let item of listaProdutos | orderBy : key reverse">          <div class="card mr-4 ml-4 p-2" style="width: 16rem;">            <img class="card-img-top cursor"              src="https://image.freepik.com/psd-gratuitas/canecas-brancas-com-maquete-de-cor-editavel_149660-64.jpg"              alt="Imagem de capa do card">            <div class="card-body">              <h4 class="card-title">{{item.nome}}</h4>              <div class="buy d-flex justify-content-between align-items-center">                <div class="price text-success">                  <h5 class="mt-4">R${{item.preco}}</h5>                </div>                <button type="button" class="btn btn-danger" routerLink=\'/carrinho\'>Comprar</button>              </div>            </div>          </div>        </div>      </div>    </div>  </div>  <hr class="hr3">  <!-- Copyright -->  <div class="footer-copyright corcopy text-center py-3 cor">    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>    <a class="text-dark"></a>  </div>  <!-- Copyright --></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
+        var COMPONENT_TEMPLATE = '<div><!--POG--><div class="row mt-4 mb-4"></div><!--/POG--><!--Banner--><div class="jumbotron jumbotron-fluid fundoJumbo">  <div class="container">    <div class="row d-flex justify-content-end">      <div class="col-lg-6 col-md-6 col-sm-6 branco"></div>      <div class="half col-lg-6 col-md-6 col-sm-6 branco">        <h2 class="display-4 titulo-responsivo ">Um gole de inspiração</h2>        <p class="lead branco texto-responsivo ">As grandes ideias surgem com uma caneca na mão!</p>      </div>    </div>  </div></div><!--/Banner--><div class="container-fluid">  <div class="row">    <div class="container">      <nav class="d-flex justify-content-center mt-2">        <div class="nav nav-tabs" id="nav-tab" role="tablist">          <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"            href="#Canecas" role="tab" aria-controls="nav-home" aria-selected="true"            (click)="ativaProduto()">Canecas</a>          <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"            href="#Categorias" role="tab" aria-controls="nav-profile" aria-selected="false" (click)="ativaCategoria()">            Categorias </a>        </div>      </nav>      <div class="tab-content " id="nav-tabContent">        <div class="tab-pane fade show active" id="Canecas" role="tabpanel" aria-labelledby="nav-postagens-tab">          <div class="row  mt-3 ml-0  mr-0">            <div class=" col-12 col-md-10 p-0 m-0">              <input class="form-control w-100" type="search" placeholder="Pesquisar caneca" aria-label="Pesquisar"                [(ngModel)]="nomeProduto">            </div>            <div class=" col-12 col-md-2 p-0 m-0">              <button class="btn btn-outline-primary w-100 ml-3" type="button"                (click)="findByNomeProduto()">Pesquisar</button>            </div>          </div>        </div>        <div class="tab-pane fade" id="Categorias" role="tabpanel" aria-labelledby="nav-presenca-tab">          <div class="row mt-3 mb-2  ml-0  mr-0">            <div class="col-md-10 p-0 m-0">              <input class="form-control w-100" type="search" placeholder="Pesquisar Categoria" aria-label="Pesquisar"                [(ngModel)]="nomeCategoria">            </div>            <div class="col-md-2 p-0 m-0">              <button class="btn btn-outline-primary w-100" type="button"                (click)="findByNomeCategoria()">Pesquisar</button>            </div>          </div>        </div>      </div>    </div>    <div *ngIf=\'!!pesquisa\'>      <div class="row w-100 d-flex justify-content-center">        <div class="mt-3 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center"          *ngFor="let item of listaProdutos | orderBy : key reverse">          <div class="card mt-5 p-2" style="width: 16rem;">            <img class="card-img-top cursor cardImg" src="{{item.imagem}}" alt="Imagem de capa do card">            <div class="card-body">              <h4 class="card-title">{{item.nome}}</h4>              <div class="buy d-flex justify-content-between align-items-center">                <div class="price text-success">                  <h5 class="mt-4">R${{item.preco}}</h5>                </div>                <button type="button" class="btn btn-danger" [routerLink]=\'["/demo-produto", item.id]\'>Comprar</button>              </div>            </div>          </div>        </div>      </div>    </div>    <div *ngIf=\'!pesquisa\'>            <div class="container">        <div class="row w-100 d-flex justify-content-center">          <div class="mt-3 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center"            *ngFor="let item of listaCategorias; index as i">            <div class="card mt-5 p-2" *ngFor=\'let x of item.produto\'>              <img class="card-img-top cursor cardImg" src="{{x.imagem}}" alt="Imagem de capa do card">              <div class="card-body">                <h4 class="card-title">{{x.nome}}</h4>                <div class="buy d-flex justify-content-between align-items-center">                  <div class="price text-success">                    <h5 class="mt-4">R${{x.preco}}</h5>                  </div>                  <button type="button" class="btn btn-danger" [routerLink]=\'["/demo-produto", x.id]\'>Comprar</button>                </div>              </div>            </div>          </div>        </div>      </div>          </div>  </div>  <hr class="hr3">  <!-- Copyright -->  <div class="footer-copyright corcopy text-center py-3 cor">    <span class="text-dark"> Copyright © GetSet 2020.Todos direitos reservados </span>    <a class="text-dark"></a>  </div>  <!-- Copyright --></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DeleteCategoriaComponent', 'selector': 'app-delete-categoria'},{'name': 'DeleteProdutoComponent', 'selector': 'app-delete-produto'},{'name': 'DemoProdutoComponent', 'selector': 'app-demo-produto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostCategoriasComponent', 'selector': 'app-post-categorias'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'PutCategoriaComponent', 'selector': 'app-put-categoria'},{'name': 'PutProdutoComponent', 'selector': 'app-put-produto'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ProdutosComponent'};
 </script>

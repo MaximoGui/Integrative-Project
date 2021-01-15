@@ -85,6 +85,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#descricao">descricao</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#estoque">estoque</a>
                             </li>
                             <li>
@@ -102,10 +106,6 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#preco">preco</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#tecnologia">tecnologia</a>
                             </li>
                         </ul>
                     </td>
@@ -148,6 +148,34 @@
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/Model/Produto.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="descricao"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            descricao</b>
+                            <a href="#descricao"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/Model/Produto.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -294,34 +322,6 @@
 
             </tbody>
         </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="tecnologia"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            tecnologia</b>
-                            <a href="#tecnologia"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/Model/Produto.ts:6</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
 </section>
 
 
@@ -339,7 +339,7 @@
 export class Produto {
     public id: number;
     public nome: string;
-    public tecnologia: string;
+    public descricao: string;
     public imagem: string;
     public preco: number;
     public estoque: number;

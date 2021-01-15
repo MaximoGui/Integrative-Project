@@ -99,6 +99,9 @@
                                 <a href="#getByIdProduto">getByIdProduto</a>
                             </li>
                             <li>
+                                <a href="#getByIdProdutos">getByIdProdutos</a>
+                            </li>
+                            <li>
                                 <a href="#getByNomeProduto">getByNomeProduto</a>
                             </li>
                             <li>
@@ -195,8 +198,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/service/produtos.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/service/produtos.service.ts:38</a></div>
                 </td>
             </tr>
 
@@ -356,6 +359,76 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getByIdProdutos"></a>
+                    <span class="name">
+                        <b>
+                            getByIdProdutos
+                        </b>
+                        <a href="#getByIdProdutos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getByIdProdutos(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/service/produtos.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Produto.html" target="_self" >Observable&lt;Produto&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getByNomeProduto"></a>
                     <span class="name">
                         <b>
@@ -374,8 +447,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/service/produtos.service.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/service/produtos.service.ts:42</a></div>
                 </td>
             </tr>
 
@@ -444,8 +517,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/service/produtos.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/service/produtos.service.ts:30</a></div>
                 </td>
             </tr>
 
@@ -514,8 +587,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/service/produtos.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/service/produtos.service.ts:34</a></div>
                 </td>
             </tr>
 
@@ -626,28 +699,33 @@ export class ProdutosService {
   }
 
   getAllProdutos(): Observable&lt;Produto[]&gt; {
-    return this.http.get&lt;Produto[]&gt;(&#x27;https://localhost:9000/produtos&#x27;,this.token)
+    return this.http.get&lt;Produto[]&gt;(&#x27;http://localhost:9000/produtos&#x27;,this.token)
   }
 
   getByIdProduto(id: number): Observable&lt;Produto&gt; {
-    return this.http.get&lt;Produto&gt;(&#x60;https://localhost:9000/produtos/${id}&#x60;, this.token)
+    return this.http.get&lt;Produto&gt;(&#x60;http://localhost:9000/produtos/${id}&#x60;, this.token)
+  }
+
+  getByIdProdutos(id: number): Observable&lt;Produto&gt; {
+    return this.http.get&lt;Produto&gt;(&#x60;http://localhost:9000/produtos/${id}&#x60;, this.token)
   }
 
   postProduto(produto: Produto): Observable&lt;Produto&gt; {
-    return this.http.post&lt;Produto&gt;(&#x27;https://localhost:9000/produtos&#x27;, produto, this.token)
+    return this.http.post&lt;Produto&gt;(&#x27;http://localhost:9000/produtos&#x27;, produto, this.token)
   }
 
   putProduto(produto: Produto): Observable&lt;Produto&gt; {
-    return this.http.put&lt;Produto&gt;(&#x27;https://localhost:9000/produtos&#x27;, produto, this.token)
+    return this.http.put&lt;Produto&gt;(&#x27;http://localhost:9000/produtos&#x27;, produto, this.token)
   }
 
   deleteProduto(id: number) {
-    return this.http.delete(&#x60;https://localhost:9000/produtos/${id}&#x60;, this.token)
+    return this.http.delete(&#x60;http://localhost:9000/produtos/${id}&#x60;, this.token)
   }
 
   getByNomeProduto(nome: string): Observable&lt;Produto[]&gt; {
-    return this.http.get&lt;Produto[]&gt;(&#x60;https://localhost:9000/produtos/nome/${nome}&#x60;, this.token)
+    return this.http.get&lt;Produto[]&gt;(&#x60;http://localhost:9000/produtos/nome/${nome}&#x60;, this.token)
   }
+
 }
 </code></pre>
     </div>
