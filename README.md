@@ -1,4 +1,5 @@
 <p align="center">
+	
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MaximoGui/Integrative-Project?color=%2304D361">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/MaximoGui/Integrative-Project">
@@ -7,8 +8,8 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MaximoGui/Integrative-Project">
   </a>
     
-   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/MaximoGui/Integrative-Project/stargazers">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  <a href="https://github.com/MaximoGui/Integrative-Project/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/MaximoGui/Integrative-Project?style=social">
   </a>
 
@@ -18,17 +19,14 @@
   
   <a href="">
     <img alt="Stargazers" src="https://img.shields.io/badge/Site-GetSet-tomato?style=flat&logo=ghost">
-    </a>
-  
- 
+  </a>
 </p>
+
 <h1 align="center">
-    <img alt="GetSet E-commerce" title="#GetSet E-commerce" src="https://youtu.be/HeL6ZsMWHNM" />
+    <img alt="GetSet E-commerce" href="#GetSet E-commerce" src="https://i.imgur.com/tDzv0ei.png" />
 </h1>
 
-<h4 align="center"> 
-	🚧  E-commerce em desenvolvimento 🚀 🚧
-</h4>
+<h4 align="center">🚧 E-commerce em desenvolvimento 🚀 🚧</h4>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -39,7 +37,7 @@
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-contribuidores">Contribuidores</a> • 
  <a href="#-autor">Autor</a> • 
- <a href="#user-licença">Licença</a>
+ <a href="#-licença">Licença</a>
 </p>
 
 ## 💻 Sobre o projeto
@@ -127,8 +125,8 @@ Este projeto é divido em duas partes:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+[Git](https://git-scm.com), [Java 8 (Java Runtime Environment JRE)](https://www.java.com/pt-BR/download/), [Java 11 (Java SE Development Kit JDK)](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html), [Node.js](https://nodejs.org/en/), [Docker](https://docs.docker.com/docker-for-windows/install/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e [Eclipse](https://www.eclipse.org/downloads/packages/)
 
 #### 🎲 Rodando o Backend (servidor)
 
@@ -223,11 +221,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Rubenscode"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/40808539?v=4" width="100px;" alt=""/><br /><sub><b>Rubens Almeida</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀 :alien:</a></td>
-    <td align="center"><a href="https://github.com/MarcusViniciusO"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/72392984?v=4" width="100px;" alt=""/><br /><sub><b>Marcus Vinicius</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:bulb: :floppy_disk:</a></td>
-    <td align="center"><a href="https://github.com/andersonlima07"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/72565077?v=4" width="100px;" alt=""/><br /><sub><b>Anderson Lima</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀</a></td>
-    <td align="center"><a href="https://github.com/MaximoGui"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/72393702?v=4" width="100px;" alt=""/><br /><sub><b>Guilherme Maximo</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:trollface: :books:</a></td>
-    <td align="center"><a href="https://github.com/MateusBCC020"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/61809283?v=4" width="100px;" alt=""/><br /><sub><b>Mateus Ribeiro</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:octocat: :musical_note:</a></td> 
+    <td align="center"><a href="https://github.com/Rubenscode"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/40808539?v=4" width="150px;" alt=""/><br /><sub><b>Rubens Almeida</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀 :alien:</a></td>
+    <td align="center"><a href="https://github.com/MarcusViniciusO"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/72392984?v=4" width="150px;" alt=""/><br /><sub><b>Marcus Vinicius</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:bulb: :floppy_disk:</a></td>
+    <td align="center"><a href="https://github.com/andersonlima07"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/72565077?v=4" width="150px;" alt=""/><br /><sub><b>Anderson Lima</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/MaximoGui"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/72393702?v=4" width="150px;" alt=""/><br /><sub><b>Guilherme Maximo</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:trollface: :books:</a></td>
+    <td align="center"><a href="https://github.com/MateusBCC020"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/61809283?v=4" width="150px;" alt=""/><br /><sub><b>Mateus Ribeiro</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:octocat: :musical_note:</a></td> 
   </tr>
 </table>
 
@@ -242,16 +240,23 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 
 ## 🦸 Autor
-  
-<a href="https://github.com/Rubenscode">
- <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/40808539?v=4" width="100px;" alt=""/>
- <br />
- <sub><b>Rubens Almeida</b></sub></a> <a href="https://github.com/Rubenscode" title="GetSet">🚀</a>
- <br />
+
+<table>
+  <tr>
+    <td align="center">
+	<a href="https://github.com/Rubenscode">
+	<img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/40808539?v=4" width="150px;" alt=""/>
+	<br>
+	<sub><b>Rubens Almeida</b></sub></a>
+	<br>
+    </td>
+  </tr>
+</table>
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/Rubenscode)](https://github.com/Rubenscode)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rubens-almeida-andrade/)](https://www.linkedin.com/in/rubens-almeida-andrade/)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rubens.andrade1@gmail.com)](mailto:rubens.andrade1@gmail.com)<br>
+
 
 ---
 
@@ -261,6 +266,6 @@ Este projeto esta sobe a licença [MIT](./LICENSE).
 
 Feito por Rubens Almeida 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rubens-almeida-andrade/)
 
-<p><a href="#-sobre-o-projeto"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
+<p><a href="#GetSet E-commerce"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
 
 ---
