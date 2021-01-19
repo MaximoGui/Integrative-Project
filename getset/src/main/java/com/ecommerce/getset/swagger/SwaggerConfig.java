@@ -1,4 +1,4 @@
-package com.ecommerce.getset.config;
+package com.ecommerce.getset.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class SwaggerConfig {
 	public Docket docket() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.ecommerce.getset.controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.ecommerce.getset"))
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(apiInfo());
@@ -30,14 +30,14 @@ public class SwaggerConfig {
 		return new ApiInfoBuilder()
 				.title("GetSet")
 				.description("Technology ecommerce")
-				.version("1.0")
+				.version("1.1")
 				.contact(contact())
 				.build();
 	}
 	
 	private Contact contact() {
 		return new Contact("GetSet",
-				"https://github.com/Lilgui/Integrative-Project.git",
+				"https://github.com/MaximoGui/Integrative-Project.git",
 				"Integrative project of GetSet group");
 	}
 }
