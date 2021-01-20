@@ -49,7 +49,7 @@ A missão da Generation Brasil é apoiar jovens a construírem carreiras sustent
 
 ---
 
-## Documentação Completa
+## :page_with_curl: Documentação Completa
 
 - <a href="#">Back-End</a>
 - <a href="#">Front-End</a>
@@ -91,24 +91,28 @@ A missão da Generation Brasil é apoiar jovens a construírem carreiras sustent
 
 ## 🎨 Layout
 
-### Mobile
+### :iphone: Mobile
 
 <p align="center">
+	
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/SzMDsGW.png" width="200px">
 
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/GlVwkx3.png" width="200px">
   
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/JTLiO6r.png" width="200px">
+  
 </p>
 
-### Web
+### :beginner: Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+	
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/M7POVNL.jpg" width="200px" heigth="250px">
 
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/qsaBiUA.jpg" width="200px" heigth="250px">
   
   <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/bhY08UH.png" width="200px" heigth="250px">
+  
 </p>
 
 ---
@@ -229,7 +233,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
   <tr>
     <td align="center"><a href="https://github.com/Rubenscode"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/40808539?v=4" width="150px;" alt=""/><br /><sub><b>Rubens Almeida</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀 :alien:</a></td>
     <td align="center"><a href="https://github.com/MarcusViniciusO"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/72392984?v=4" width="150px;" alt=""/><br /><sub><b>Marcus Vinicius</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:bulb: :floppy_disk:</a></td>
-    <td align="center"><a href="https://github.com/andersonlima07"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/72565077?v=4" width="150px;" alt=""/><br /><sub><b>Anderson Lima</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/andersonlima07"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/72565077?v=4" width="150px;" alt=""/><br /><sub><b>Anderson Lima</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">👨‍🚀 :dancer:</a></td>
     <td align="center"><a href="https://github.com/MaximoGui"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/72393702?v=4" width="150px;" alt=""/><br /><sub><b>Guilherme Maximo</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:trollface: :books:</a></td>
     <td align="center"><a href="https://github.com/MateusBCC020"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/61809283?v=4" width="150px;" alt=""/><br /><sub><b>Mateus Ribeiro</b></sub></a><br /><a href="https://thegetset.herokuapp.com/" title="GetSet">:octocat: :musical_note:</a></td> 
   </tr>
@@ -271,6 +275,6 @@ Este projeto esta sobe a licença [MIT](./LICENSE).
 
 Feito por Rubens Almeida :wave: [Entre em contato!](https://www.linkedin.com/in/rubens-almeida-andrade/)
 
-<p><a href="#GetSet"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
+<p><a href="#"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
 
 ---
