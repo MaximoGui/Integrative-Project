@@ -44,7 +44,6 @@
 
 :coffee: GetSet - É uma loja virtual que repassa parte de seus lucros para o apoio a instituições educacionais voltadas à tecnologia.
 
-
 Projeto desenvolvido durante o **Bootcamp Desenvolvedor Web Java Junior** oferecida pela [Generation Brasil](https://brazil.generation.org/).
 A missão da Generation Brasil é apoiar jovens a construírem carreiras sustentáveis e prósperas e fornecer aos empregadores uma rede de talentos altamente qualificados e motivados, visando aprimorar os resultados de seus negócios.
 
@@ -105,11 +104,11 @@ A missão da Generation Brasil é apoiar jovens a construírem carreiras sustent
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/M7POVNL.jpg" width="400px">
+  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/M7POVNL.jpg" width="200px" heigth="250px">
 
-  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/qsaBiUA.jpg" width="400px">
+  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/qsaBiUA.jpg" width="200px" heigth="250px">
   
-  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/bhY08UH.png" width="400px">
+  <img alt="GetSet" title="#GetSet" src="https://i.imgur.com/bhY08UH.png" width="200px" heigth="250px">
 </p>
 
 ---
@@ -125,7 +124,7 @@ Este projeto é divido em duas partes:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Java 8 (Java Runtime Environment JRE)](https://www.java.com/pt-BR/download/), [Java 11 (Java SE Development Kit JDK)](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html), [Node.js](https://nodejs.org/en/), [Docker](https://docs.docker.com/docker-for-windows/install/). 
+[Git](https://git-scm.com), [Java 8 (Java Runtime Environment JRE)](https://www.java.com/pt-BR/download/), [Java 11 (Java SE Development Kit JDK)](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html), [Node.js](https://nodejs.org/en/), [Docker](https://docs.docker.com/docker-for-windows/install/), [MySQL](https://dev.mysql.com/downloads/installer/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e [Eclipse](https://www.eclipse.org/downloads/packages/)
 
 #### 🎲 Rodando o Backend (servidor)
@@ -235,7 +234,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
 3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
 4. Envie as suas alterações: `git push origin my-feature`
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
 
 ---
 
