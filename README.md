@@ -51,8 +51,8 @@ A missão da Generation Brasil é apoiar jovens a construírem carreiras sustent
 
 ## Documentação Completa
 
-- <a href="#-sobre-o-projeto">Back-End</a>
-- <a href="#-documentação-completa">Front-End</a>
+- <a href="#">Back-End</a>
+- <a href="#">Front-End</a>
 
 ---
 
@@ -269,7 +269,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Feito por Rubens Almeida 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rubens-almeida-andrade/)
+Feito por Rubens Almeida :wave: [Entre em contato!](https://www.linkedin.com/in/rubens-almeida-andrade/)
 
 <p><a href="#GetSet"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
 
