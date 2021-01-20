@@ -23,7 +23,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="GetSet E-commerce" href="#GetSet" src="https://i.imgur.com/tDzv0ei.png" />
+    <img alt="GetSet E-commerce" href="#" src="https://i.imgur.com/tDzv0ei.png" />
 </h1>
 
 <h4 align="center">🚧 E-commerce em desenvolvimento 🚀 🚧</h4>
@@ -40,7 +40,7 @@
  <a href="#-licença">Licença</a>
 </p>
 
-## 💻 Sobre o projeto
+## 💻 Sobre o Projeto
 
 :coffee: GetSet - É uma loja virtual que repassa parte de seus lucros para o apoio a instituições educacionais voltadas à tecnologia.
 
