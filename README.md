@@ -23,7 +23,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="GetSet E-commerce" href="#GetSet E-commerce" src="https://i.imgur.com/tDzv0ei.png" />
+    <img alt="GetSet E-commerce" href="#GetSet" src="https://i.imgur.com/tDzv0ei.png" />
 </h1>
 
 <h4 align="center">🚧 E-commerce em desenvolvimento 🚀 🚧</h4>
@@ -184,23 +184,30 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Website**  ([Angular](https://angular.io/)  +  [TypeScript](https://www.typescriptlang.org/))
 
--   **[]()**
--   **[]()**
--   **[]()**
--   **[]()**
--   **[]()**
+-   **[SweetAlert2](https://sweetalert2.github.io/)**
+-   **[Ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/)**
+-   **[Ngx-order-pipe](https://www.npmjs.com/package/ngx-order-pipe)**
+-   **[RxJS](https://angular.io/guide/rx-library)**
+-   **[FortAwesome/Angular-fontawesome](https://fontawesome.com/)**
+-   **[Angular-router](https://angular.io/api/router)**
+-   **[Bootstrap-JQuery-Popper.js]()**
 
 > Veja o arquivo  [package.json](https://github.com/MaximoGui/Integrative-Project/blob/main/getsetUI/GetSetUI/package.json)
 
 #### [](https://github.com/tgmarinho/Ecoleta#server-nodejs--typescript)**Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
 
--   **[]()**
--   **[]()**
--   **[]()**
--   **[]()**
--   **[]()**
-
-> Veja o arquivo  [package.json](https://github.com/MaximoGui/Integrative-Project/blob/main/getsetUI/GetSetUI/package.json)
+-   **[Spring initializer](https://start.spring.io/):**
+  -[Maven Project](https://www.baeldung.com/spring-with-maven);
+  -[Spring Boot Dev Tools](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html);
+  -[Spring Web](https://spring.io/guides/gs/spring-boot/);
+  -[Spring Security](https://spring.io/projects/spring-security#overview);
+  -[Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference);
+  -[MySQL Driver](https://www.baeldung.com/java-connect-mysql);
+  -[Validation](https://www.baeldung.com/spring-boot-bean-validation);
+-   **[Spring Boot](https://spring.io/projects/spring-boot)**
+-   **[MySQL Workbench(8.0.22)](https://dev.mysql.com/downloads/workbench/)**
+-   **[MySQL Server(8.0.22)](https://dev.mysql.com/downloads/mysql/)**
+-   **[Docker](https://www.docker.com/)**
 
 #### [](https://github.com/MaximoGui/Integrative-Project#utilit%C3%A1rios)**Utilitários**
 
@@ -264,6 +271,6 @@ Este projeto esta sobe a licença [MIT](./LICENSE).
 
 Feito por Rubens Almeida 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rubens-almeida-andrade/)
 
-<p><a href="#GetSet E-commerce"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
+<p><a href="#GetSet"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji> Voltar ao topo</a><br></p>
 
 ---
