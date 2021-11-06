@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  token: \"\",\n  id: 0,\n  nome: '',\n  email: '',\n  senha: '',\n  apelido: '',\n  dataNascimento: '',\n  telefone: '',\n  cep: 0,\n  rua: '',\n  numero: 0,\n  complemento: '',\n  bairro: '',\n  cidade: '',\n  uf: '',\n  referencia: '',\n  admin: false\n};","map":null,"metadata":{},"sourceType":"module"}
